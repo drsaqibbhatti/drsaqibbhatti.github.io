@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Saqib Bhatti — Portfolio</title>
+  <meta name="description" content="Portfolio website of Saqib Bhatti." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg"></div>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="#">Saqib<span>.</span></a>
+      <nav class="links">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="btn">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="card hero-card">
+        <p class="badge">Available for opportunities</p>
+        <h1>Hi, I’m <span class="grad">Saqib Bhatti</span>.</h1>
+        <p class="sub">
+          I build modern web experiences and software solutions.
+          Here are a few projects and ways to reach me.
+        </p>
+
+        <div class="cta">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="ghost" href="https://github.com/drsaqibbhatti" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="ghost" href="https://www.linkedin.com/in/dr-saqib-bhatti-sr-member-ieee-21433b18/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+
+        <div class="mini">
+          <div class="pill">⚡ JavaScript</div>
+          <div class="pill">⚙️ Python</div>
+          <div class="pill">☁️ Cloud</div>
+          <div class="pill">🧩 APIs</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <p>Replace these with your real projects.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Project One</h3>
+          <p>Short 1–2 line description of what it does and impact.</p>
+          <div class="tags">
+            <span>React</span><span>API</span><span>UI</span>
+          </div>
+          <div class="row">
+            <a class="link" href="#" target="_blank" rel="noreferrer">Live</a>
+            <a class="link" href="#" target="_blank" rel="noreferrer">Code</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Project Two</h3>
+          <p>Short 1–2 line description of what it does and impact.</p>
+          <div class="tags">
+            <span>Python</span><span>Automation</span><span>Tools</span>
+          </div>
+          <div class="row">
+            <a class="link" href="#" target="_blank" rel="noreferrer">Case Study</a>
+            <a class="link" href="#" target="_blank" rel="noreferrer">Code</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Project Three</h3>
+          <p>Short 1–2 line description of what it does and impact.</p>
+          <div class="tags">
+            <span>Cloud</span><span>DevOps</span><span>CI/CD</span>
+          </div>
+          <div class="row">
+            <a class="link" href="#" target="_blank" rel="noreferrer">Live</a>
+            <a class="link" href="#" target="_blank" rel="noreferrer">Code</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-head">
+        <h2>About</h2>
+        <p>A short intro about you.</p>
+      </div>
+      <div class="card">
+        <p>
+          I’m a developer focused on building clean, fast, and user-friendly products.
+          I enjoy solving real problems with thoughtful design and strong engineering.
+        </p>
+        <p class="muted">
+          Location: Your City · Open to: Remote/On-site · Interests: Web, Cloud, Automation
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p>Let’s connect.</p>
+      </div>
+      <div class="card contact">
+        <a class="btn" href="mailto:saqibbhatti128@gmail.com">Email me</a>
+        <a class="ghost" href="https://github.com/YOURUSERNAME" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="ghost" href="https://www.linkedin.com/in/YOUR-LINKEDIN/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="y"></span> Saqib Bhatti · Built with GitHub Pages</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
