@@ -3,129 +3,1081 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Saqib Bhatti — Portfolio</title>
-  <meta name="description" content="Portfolio website of Saqib Bhatti." />
+  <title>Dr. DM Saqib Bhatti — Computer Vision Engineer</title>
+  <meta name="description" content="Deep Learning & Computer Vision expert with 15+ years of experience in Industrial AI, Defect Detection, and AOI systems." />
+  <meta property="og:title" content="Dr. DM Saqib Bhatti — Computer Vision Engineer" />
+  <meta property="og:description" content="Industrial AI • AOI • Defect Detection • Real-time Deep Learning" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#070A12" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <div class="bg"></div>
 
   <header class="nav">
     <div class="container nav-inner">
-      <a class="logo" href="#">Saqib<span>.</span></a>
+      <a class="logo" href="#top">Deep Learning & Computer Vision Engineer<span>.</span></a>
+
       <nav class="links">
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Industrial Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#publications">Publications</a>
+        <a href="#service">Recognition</a>
         <a href="#contact" class="btn">Contact</a>
+        <div class="theme-toggle">
+          <button class="theme-btn" id="lightBtn" onclick="setTheme('light')">☀️ Light</button>
+          <button class="theme-btn" id="darkBtn" onclick="setTheme('dark')">🌙 Dark</button>
+        </div>
       </nav>
     </div>
   </header>
 
-  <main class="container">
+  <main id="top" class="container">
+
+    <!-- HERO -->
     <section class="hero">
       <div class="card hero-card">
-        <p class="badge">Available for opportunities</p>
-        <h1>Hi, I’m <span class="grad">Saqib Bhatti</span>.</h1>
+        <p class="badge">Deep Learning Engineer (Computer Vision)</p>
+
+        <h1><span class="grad">Dr. DM. Saqib Bhatti</span>.</h1>
+
         <p class="sub">
-          I build modern web experiences and software solutions.
-          Here are a few projects and ways to reach me.
+          A Deep Learning & Computer Vision expert with 15+ years of experience specializing in Automated Optical Inspection (AOI),
+          Defect Detection, Industrial AI, and Infrastructure Monitoring Systems — focused on real-time, high-accuracy models using
+          customized object detection, segmentation, classification, anomaly detection, and pose estimation.
         </p>
 
         <div class="cta">
-          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn" href="#projects">View Industrial Projects</a>
+          <a class="ghost" href="#experience">Experience</a>
+          <a class="ghost" href="#publications">Publications</a>
+
           <a class="ghost" href="https://github.com/drsaqibbhatti" target="_blank" rel="noreferrer">GitHub</a>
           <a class="ghost" href="https://www.linkedin.com/in/dr-saqib-bhatti-sr-member-ieee-21433b18/" target="_blank" rel="noreferrer">LinkedIn</a>
+
+          <!-- Optional: add a PDF resume to your repo as resume.pdf -->
+          <a class="ghost" href="resume.pdf" target="_blank" rel="noreferrer">Download Resume</a>
         </div>
 
         <div class="mini">
-          <div class="pill">⚡ JavaScript</div>
-          <div class="pill">⚙️ Python</div>
-          <div class="pill">☁️ Cloud</div>
-          <div class="pill">🧩 APIs</div>
+          <div class="pill">🤖 Deep Learning</div>
+          <div class="pill">👁️ Computer Vision</div>
+          <div class="pill">🔍 Object Detection</div>
+          <div class="pill">🧠 Segmentation</div>
+          <div class="pill">🎯 Defect Detection</div>
+          <div class="pill">🏭 Industrial AI / AOI</div>
+          <div class="pill">⚙️ PyTorch / TensorFlow</div>
+          <div class="pill">🚀 TensorRT Optimization</div>
+        </div>
+
+        <div class="hero-meta">
+          <div class="meta-card">
+            <p class="meta-k">Current</p>
+            <p class="meta-v">Computer Vision Engineer (Deep Learning)</p>
+            <p class="meta-s">Hyvision Systems · South Korea</p>
+          </div>
+          <div class="meta-card">
+            <p class="meta-k">Education</p>
+            <p class="meta-v">MS–PhD, Hanyang University</p>
+            <p class="meta-s">Seoul, South Korea (2012–2017)</p>
+          </div>
+          <div class="meta-card">
+            <p class="meta-k">Focus</p>
+            <p class="meta-v">AOI + Real-time Inspection</p>
+            <p class="meta-s">Defects, anomaly detection, monitoring</p>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="section-head">
+        <h2>Experience</h2>
+        <p>Industry + research roles across Computer Vision, Industrial AI, and inspection systems.</p>
+      </div>
+
+      <div class="timeline">
+        <article class="card tl-item">
+          <div class="tl-top">
+            <h3>Computer Vision Engineer</h3>
+            <span class="tl-date">Jul 2024 – Present</span>
+          </div>
+          <p class="muted">(Deep Learning) Hyvision Systems</p>
+          <ul class="clean-list">
+            <li>Industrial AOI and defect detection pipelines for production.</li>
+            <li>Real-time optimization and deployment-ready model engineering.</li>
+          </ul>
+        </article>
+
+        <article class="card tl-item">
+          <div class="tl-top">
+            <h3>Computer Vision & AI Researcher</h3>
+            <span class="tl-date">Jan 2024 – Jul 2024</span>
+          </div>
+          <p class="muted">Soongsil University, Seoul, South Korea</p>
+          <ul class="clean-list">
+            <li>Computer vision and AI research.</li>
+          </ul>
+        </article>
+
+        <article class="card tl-item">
+          <div class="tl-top">
+            <h3>Computer Vision & AI Researcher</h3>
+            <span class="tl-date">Jun 2021 – Dec 2023</span>
+          </div>
+          <p class="muted">Hanyang University, South Korea</p>
+          <ul class="clean-list">
+            <li>Research and development in AI/vision systems.</li>
+          </ul>
+        </article>
+
+        <article class="card tl-item">
+          <div class="tl-top">
+            <h3>Head of Department</h3>
+            <span class="tl-date">Nov 2020 – May 2021</span>
+          </div>
+          <p class="muted">Dawood University of Engineering & Technology, Pakistan</p>
+          <ul class="clean-list">
+            <li>Academic leadership and departmental management.</li>
+          </ul>
+        </article>
+
+        <article class="card tl-item">
+          <div class="tl-top">
+            <h3>Assistant Professor</h3>
+            <span class="tl-date">Jan 2017 – May 2021</span>
+          </div>
+          <p class="muted">Dawood University of Engineering & Technology, Pakistan</p>
+          <ul class="clean-list">
+            <li>Teaching, supervision, and research.</li>
+          </ul>
+        </article>
+
+        <article class="card tl-item">
+          <div class="tl-top">
+            <h3>Research Assistant PhD</h3>
+            <span class="tl-date">Sep 2012 – Feb 2017</span>
+          </div>
+          <p class="muted">Hanyang University, South Korea</p>
+          <ul class="clean-list">
+            <li>MS–PhD track, research and publications.</li>
+          </ul>
+        </article>
+
+        <article class="card tl-item">
+          <div class="tl-top">
+            <h3>BSS Engineer</h3>
+            <span class="tl-date">Jan 2011 – Aug 2012</span>
+          </div>
+          <p class="muted">Huawei Technologies, Pakistan</p>
+          <ul class="clean-list">
+            <li>Telecom engineering experience.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="card note">
+        <p class="muted" style="margin:0;">
+          <strong>Academic Qualifications:</strong><br/>
+          MS–PhD (South Korea): Hanyang University, Seoul (Sep 2012 – Feb 2017) ·
+          BE (Pakistan): Mehran University of Engineering & Technology (Jan 2007 – Dec 2010)
+        </p>
+      </div>
+    </section>
+
+    <!-- INDUSTRIAL PROJECTS -->
     <section id="projects" class="section">
       <div class="section-head">
-        <h2>Projects</h2>
-        <p>Replace these with your real projects.</p>
+        <h2>Industrial Projects</h2>
+        <p>All industrial projects from your resume (click each to expand).</p>
       </div>
 
-      <div class="grid">
-        <article class="card">
-          <h3>Project One</h3>
-          <p>Short 1–2 line description of what it does and impact.</p>
-          <div class="tags">
-            <span>React</span><span>API</span><span>UI</span>
-          </div>
-          <div class="row">
-            <a class="link" href="#" target="_blank" rel="noreferrer">Live</a>
-            <a class="link" href="#" target="_blank" rel="noreferrer">Code</a>
-          </div>
-        </article>
+      <div class="stack">
 
-        <article class="card">
-          <h3>Project Two</h3>
-          <p>Short 1–2 line description of what it does and impact.</p>
-          <div class="tags">
-            <span>Python</span><span>Automation</span><span>Tools</span>
+        <details class="acc card" open>
+          <summary>
+            <span class="acc-title">AOI System for Apple iPhone Front Glass Surface Inspection — Apple</span>
+            <span class="acc-tag">14 defect classes · YOLOv11 + SegNExt · TensorRT</span>
+          </summary>
+          <p class="muted">AOI system for iPhone front glass surface inspection (scratches, particles, contamination, pinholes, etc.).</p>
+          <div class="acc-grid">
+            <div>
+              <h4>Role / Tasks</h4>
+              <ul class="clean-list">
+                <li>Hybrid inspection: object detection + segmentation for multi-class defect recognition.</li>
+                <li>Integrated YOLOv11 with customized SegNExt segmentation network.</li>
+                <li>Applied TensorRT optimization for real-time deployment.</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Development</h4>
+              <p class="muted"><strong>Language:</strong> Python & C#</p>
+              <p class="muted"><strong>Libraries:</strong> PyTorch, YOLOv11, TensorRT, OpenCV, SegNExt</p>
+              <h4>End Result</h4>
+              <ul class="clean-list">
+                <li>Fast and highly accurate multi-class inspection (14 defect types).</li>
+                <li>Production-grade speed and robustness for high-throughput manufacturing.</li>
+              </ul>
+            </div>
           </div>
-          <div class="row">
-            <a class="link" href="#" target="_blank" rel="noreferrer">Case Study</a>
-            <a class="link" href="#" target="_blank" rel="noreferrer">Code</a>
+          <div class="acc-actions">
+            <a class="btn-sm" href="projects/iphone-front-glass-aoi.html">View details →</a>
           </div>
-        </article>
+        </details>
 
-        <article class="card">
-          <h3>Project Three</h3>
-          <p>Short 1–2 line description of what it does and impact.</p>
-          <div class="tags">
-            <span>Cloud</span><span>DevOps</span><span>CI/CD</span>
+        <details class="acc card">
+          <summary>
+            <span class="acc-title">Automated Optical Inspection for iPhone User Side Glass Logo — Apple</span>
+            <span class="acc-tag">Segmentation · Logo region defects</span>
+          </summary>
+          <p class="muted">Inspection for user-side glass logo area with precision segmentation to detect subtle defects.</p>
+          <div class="acc-grid">
+            <div>
+              <h4>Role / Tasks</h4>
+              <ul class="clean-list">
+                <li>Designed segmentation-based inspection for reflective/low-contrast logo regions.</li>
+                <li>Improved defect localization and classification robustness.</li>
+                <li>Production-ready optimization and validation.</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Development</h4>
+              <p class="muted"><strong>Language:</strong> Python</p>
+              <p class="muted"><strong>Libraries:</strong> PyTorch, OpenCV</p>
+              <h4>End Result</h4>
+              <ul class="clean-list">
+                <li>Reliable detection of logo-region defects with stable performance.</li>
+              </ul>
+            </div>
           </div>
-          <div class="row">
-            <a class="link" href="#" target="_blank" rel="noreferrer">Live</a>
-            <a class="link" href="#" target="_blank" rel="noreferrer">Code</a>
+          <div class="acc-actions">
+            <a class="btn-sm" href="projects/iphone-logo-inspection.html">View details →</a>
           </div>
-        </article>
+        </details>
+
+        <details class="acc card">
+          <summary>
+            <span class="acc-title">Gesture Recognition System for Laser Machine Safety Control — Apple</span>
+            <span class="acc-tag">ToF · Detection + Time-series</span>
+          </summary>
+          <p class="muted">Two-stage system for safety: human detection + 3D time-series gesture classification (6 gestures).</p>
+          <div class="acc-grid">
+            <div>
+              <h4>Role / Tasks</h4>
+              <ul class="clean-list">
+                <li>Built human detection stage and gesture pipeline with ToF data.</li>
+                <li>Designed time-series classifier for 6 gesture classes.</li>
+                <li>Latency reduction for real-time safety control.</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Development</h4>
+              <p class="muted"><strong>Language:</strong> Python</p>
+              <p class="muted"><strong>Libraries:</strong> PyTorch, OpenCV</p>
+              <h4>End Result</h4>
+              <ul class="clean-list">
+                <li>Real-time safety gesture recognition system for laser machines.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc-actions">
+            <a class="btn-sm" href="projects/gesture-recognition-laser.html">View details →</a>
+          </div>
+        </details>
+
+        <details class="acc card">
+          <summary>
+            <span class="acc-title">AOI System for iPhone Camera-Hole Inspection — Apple</span>
+            <span class="acc-tag">Hybrid segmentation · Small/large defects</span>
+          </summary>
+          <p class="muted">Camera-hole sidewall defect inspection using hybrid segmentation to handle diverse defect scales.</p>
+          <div class="acc-grid">
+            <div>
+              <h4>Role / Tasks</h4>
+              <ul class="clean-list">
+                <li>Developed hybrid segmentation pipeline for small and large defects.</li>
+                <li>Optimized model inference under production constraints.</li>
+                <li>Improved generalization across variations and reflections.</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Development</h4>
+              <p class="muted"><strong>Language:</strong> Python</p>
+              <p class="muted"><strong>Libraries:</strong> PyTorch, OpenCV</p>
+              <h4>End Result</h4>
+              <ul class="clean-list">
+                <li>High-accuracy inspection suitable for real-time line deployment.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc-actions">
+            <a class="btn-sm" href="projects/iphone-camera-hole-inspection.html">View details →</a>
+          </div>
+        </details>
+
+        <details class="acc card">
+          <summary>
+            <span class="acc-title">End-to-End System for iPhone Backside Panel Inspection — Apple</span>
+            <span class="acc-tag">Severity grading (A–D) · Measurement</span>
+          </summary>
+          <p class="muted">Pipeline that detects defects, measures size, and grades severity (A–D).</p>
+          <div class="acc-grid">
+            <div>
+              <h4>Role / Tasks</h4>
+              <ul class="clean-list">
+                <li>Designed multi-stage inspection with detection + measurement.</li>
+                <li>Implemented severity classification based on size/criteria.</li>
+                <li>Improved robustness for varying surface appearance.</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Development</h4>
+              <p class="muted"><strong>Language:</strong> Python</p>
+              <p class="muted"><strong>Libraries:</strong> OpenCV, PyTorch</p>
+              <h4>End Result</h4>
+              <ul class="clean-list">
+                <li>Accurate defect grading and automated decision support.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc-actions">
+            <a class="btn-sm" href="projects/iphone-backside-panel-inspection.html">View details →</a>
+          </div>
+        </details>
+
+        <details class="acc card">
+          <summary>
+            <span class="acc-title">Automated Ampule Inspection System with Deep Learning — Apple</span>
+            <span class="acc-tag">Detection/segmentation · Quality assurance</span>
+          </summary>
+          <p class="muted">Deep learning-based ampule inspection system for defect detection and quality control.</p>
+          <div class="acc-grid">
+            <div>
+              <h4>Role / Tasks</h4>
+              <ul class="clean-list">
+                <li>Designed inspection pipeline for ampule defects.</li>
+                <li>Validated model performance under production constraints.</li>
+                <li>Improved reliability via data augmentation and tuning.</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Development</h4>
+              <p class="muted"><strong>Language:</strong> Python</p>
+              <p class="muted"><strong>Libraries:</strong> PyTorch, OpenCV</p>
+              <h4>End Result</h4>
+              <ul class="clean-list">
+                <li>Automated, production-ready ampule inspection pipeline.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc-actions">
+            <a class="btn-sm" href="projects/ampule-inspection.html">View details →</a>
+          </div>
+        </details>
+
+        <details class="acc card">
+          <summary>
+            <span class="acc-title">Display Chip Inspection System — Samsung SDI</span>
+            <span class="acc-tag">High precision inspection</span>
+          </summary>
+          <p class="muted">Inspection system for display chips with strong accuracy and robustness requirements.</p>
+          <div class="acc-grid">
+            <div>
+              <h4>Role / Tasks</h4>
+              <ul class="clean-list">
+                <li>Designed vision pipeline for chip inspection and defect localization.</li>
+                <li>Optimized model inference and stability across conditions.</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Development</h4>
+              <p class="muted"><strong>Language:</strong> Python</p>
+              <p class="muted"><strong>Libraries:</strong> OpenCV, PyTorch</p>
+              <h4>End Result</h4>
+              <ul class="clean-list">
+                <li>Reliable inspection workflow suitable for industrial QA.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc-actions">
+            <a class="btn-sm" href="projects/display-chip-inspection.html">View details →</a>
+          </div>
+        </details>
+
+        <details class="acc card">
+          <summary>
+            <span class="acc-title">AOI System for iPhone MIC Hole Inspection — Apple</span>
+            <span class="acc-tag">Small defect detection</span>
+          </summary>
+          <p class="muted">Inspection pipeline targeting mic-hole region defects with tight tolerance.</p>
+          <div class="acc-grid">
+            <div>
+              <h4>Role / Tasks</h4>
+              <ul class="clean-list">
+                <li>Built AOI pipeline for mic-hole defect detection and validation.</li>
+                <li>Improved robustness for small features and reflections.</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Development</h4>
+              <p class="muted"><strong>Language:</strong> Python</p>
+              <p class="muted"><strong>Libraries:</strong> OpenCV, PyTorch</p>
+              <h4>End Result</h4>
+              <ul class="clean-list">
+                <li>High-precision mic-hole inspection ready for deployment.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc-actions">
+            <a class="btn-sm" href="projects/iphone-mic-hole-inspection.html">View details →</a>
+          </div>
+        </details>
+
+        <details class="acc card">
+          <summary>
+            <span class="acc-title">PCB Board Defects with Anomaly Detection — Company A</span>
+            <span class="acc-tag">Heatmap anomaly detection</span>
+          </summary>
+          <p class="muted">Anomaly detection for PCB boards (short circuits, irregular patterns) with reduced labeling needs.</p>
+          <div class="acc-grid">
+            <div>
+              <h4>Role / Tasks</h4>
+              <ul class="clean-list">
+                <li>Designed anomaly pipeline producing heatmap-based defect localization.</li>
+                <li>Handled limited labels using anomaly learning strategy.</li>
+                <li>Optimized post-processing for robust decisions.</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Development</h4>
+              <p class="muted"><strong>Language:</strong> Python</p>
+              <p class="muted"><strong>Libraries:</strong> PyTorch, OpenCV, NumPy</p>
+              <h4>End Result</h4>
+              <ul class="clean-list">
+                <li>Reliable PCB anomaly detection with strong localization quality.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc-actions">
+            <a class="btn-sm" href="projects/pcb-anomaly.html">View details →</a>
+          </div>
+          
+        </details>
+
+        <details class="acc card">
+          <summary>
+            <span class="acc-title">Sebang EV Battery Inspection System with AI — Company B</span>
+            <span class="acc-tag">U-Net segmentation · Weld measurement</span>
+          </summary>
+          <p class="muted">EV battery welding inspection: pinhole/spatter detection and weld size measurement.</p>
+          <div class="acc-grid">
+            <div>
+              <h4>Role / Tasks</h4>
+              <ul class="clean-list">
+                <li>Developed U-Net based segmentation for welding defect detection.</li>
+                <li>Implemented measurement for weld size and defect severity.</li>
+                <li>Optimized for consistent industrial performance.</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Development</h4>
+              <p class="muted"><strong>Language:</strong> Python</p>
+              <p class="muted"><strong>Libraries:</strong> PyTorch, U-Net, OpenCV</p>
+              <h4>End Result</h4>
+              <ul class="clean-list">
+                <li>Accurate welding defect detection with automated measurement output.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc-actions">
+            <a class="btn-sm" href="projects/ev-battery-inspection.html">View details →</a>
+          </div>
+        </details>
+
+        <details class="acc card">
+          <summary>
+            <span class="acc-title">Camera Module & Power Button Gap Inspection — Company C</span>
+            <span class="acc-tag">Geometric inspection · Measurement</span>
+          </summary>
+          <p class="muted">Vision-based inspection system for gap measurement/verification in assembled components.</p>
+          <div class="acc-grid">
+            <div>
+              <h4>Role / Tasks</h4>
+              <ul class="clean-list">
+                <li>Designed measurement pipeline for camera module and power button gap.</li>
+                <li>Improved precision and robustness across variations.</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Development</h4>
+              <p class="muted"><strong>Language:</strong> Python</p>
+              <p class="muted"><strong>Libraries:</strong> OpenCV, PyTorch</p>
+              <h4>End Result</h4>
+              <ul class="clean-list">
+                <li>Stable, accurate gap inspection suitable for production QA.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc-actions">
+            <a class="btn-sm" href="projects/gap-inspection.html">View details →</a>
+          </div>
+        </details>
+
+        <details class="acc card">
+          <summary>
+            <span class="acc-title">Road Sign Detection for Automated Vehicles — Company D</span>
+            <span class="acc-tag">Detection · Real-time</span>
+          </summary>
+          <p class="muted">Real-time traffic/road sign detection for automated vehicle use-cases.</p>
+          <div class="acc-grid">
+            <div>
+              <h4>Role / Tasks</h4>
+              <ul class="clean-list">
+                <li>Designed object detection pipeline for road sign recognition.</li>
+                <li>Improved performance in diverse lighting/environment conditions.</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Development</h4>
+              <p class="muted"><strong>Language:</strong> Python</p>
+              <p class="muted"><strong>Libraries:</strong> PyTorch, YOLO, OpenCV</p>
+              <h4>End Result</h4>
+              <ul class="clean-list">
+                <li>Reliable road sign detection with real-time inference capability.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc-actions">
+            <a class="btn-sm" href="projects/road-sign-detection.html">View details →</a>
+          </div>
+        </details>
+
+        <details class="acc card">
+          <summary>
+            <span class="acc-title">Power Line Galloping Detection System — Company E</span>
+            <span class="acc-tag">Video monitoring · Alerts</span>
+          </summary>
+          <p class="muted">Video-based monitoring of abnormal oscillations to prevent power line failures.</p>
+          <div class="acc-grid">
+            <div>
+              <h4>Role / Tasks</h4>
+              <ul class="clean-list">
+                <li>Built detection using motion/time-series analysis.</li>
+                <li>Integrated alert mechanisms for real-time monitoring.</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Development</h4>
+              <p class="muted"><strong>Language:</strong> Python</p>
+              <p class="muted"><strong>Libraries:</strong> OpenCV, PyTorch, NumPy</p>
+              <h4>End Result</h4>
+              <ul class="clean-list">
+                <li>Reliable real-time detection of galloping events.</li>
+                <li>Improved grid stability via proactive maintenance decisions.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc-actions">
+            <a class="btn-sm" href="projects/power-line-galloping.html">View details →</a>
+          </div>
+        </details>
+
+        <details class="acc card">
+          <summary>
+            <span class="acc-title">Transmission Tower Equipment Defect Detection — Company E</span>
+            <span class="acc-tag">Detection + segmentation · Field robustness</span>
+          </summary>
+          <p class="muted">Inspection system for tower defects (cracks, corrosion, loose components, surface damage).</p>
+          <div class="acc-grid">
+            <div>
+              <h4>Role / Tasks</h4>
+              <ul class="clean-list">
+                <li>Computer vision pipeline to detect and classify defects from images.</li>
+                <li>Deep learning models (object detection + segmentation) for localization.</li>
+                <li>Data augmentation for lighting/weather robustness.</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Development</h4>
+              <p class="muted"><strong>Language:</strong> Python</p>
+              <p class="muted"><strong>Libraries:</strong> PyTorch, YOLO, OpenCV</p>
+              <h4>End Result</h4>
+              <ul class="clean-list">
+                <li>High-accuracy real-time defect detection across multiple failure modes.</li>
+                <li>Improved maintenance scheduling and safety through early detection.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc-actions">
+            <a class="btn-sm" href="projects/tower-equipment-detection.html">View details →</a>
+          </div>
+        </details>
+
       </div>
+
     </section>
 
-    <section id="about" class="section">
+    <!-- SKILLS -->
+    <section id="skills" class="section">
       <div class="section-head">
-        <h2>About</h2>
-        <p>A short intro about you.</p>
+        <h2>Skills</h2>
+        <p>Tooling and frameworks used across industrial CV and deep learning systems.</p>
       </div>
-      <div class="card">
-        <p>
-          I’m a developer focused on building clean, fast, and user-friendly products.
-          I enjoy solving real problems with thoughtful design and strong engineering.
-        </p>
-        <p class="muted">
-          Location: Your City · Open to: Remote/On-site · Interests: Web, Cloud, Automation
-        </p>
+
+      <div class="grid3">
+        <article class="card">
+          <h3>Programming</h3>
+          <p class="muted"><strong>Languages:</strong></p>
+          <div style="display:flex;gap:16px;align-items:center;margin-top:10px;flex-wrap:wrap;">
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-python-plain colored" style="font-size:28px;"></i> Python</span>
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-matlab-plain colored" style="font-size:28px;"></i> MATLAB</span>
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-c-plain colored" style="font-size:28px;"></i> C</span>
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-cplusplus-plain colored" style="font-size:28px;"></i> C++</span>
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-csharp-plain colored" style="font-size:28px;"></i> C#</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Libraries</h3>
+          <div style="display:flex;gap:16px;align-items:center;margin-top:10px;flex-wrap:wrap;">
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-keras-plain colored" style="font-size:28px;"></i> Keras</span>
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-opencv-plain colored" style="font-size:28px;"></i> OpenCV</span>
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-tensorflow-original colored" style="font-size:28px;"></i> TensorFlow</span>
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-pytorch-original colored" style="font-size:28px;"></i> PyTorch</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Frameworks / Models</h3>
+          <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px;">
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+              <span style="font-size:20px;">🎯</span>
+              <span class="muted"><strong>Detection:</strong> YOLO, Fast R-CNN, Detectron2</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+              <span style="font-size:20px;">🔬</span>
+              <span class="muted"><strong>Segmentation:</strong> U-Net, SegNExt</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+              <span style="font-size:20px;">🧠</span>
+              <span class="muted"><strong>Neural Networks:</strong> CNN, DNN, RNN, GAN</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+              <span style="font-size:20px;">📱</span>
+              <span class="muted"><strong>Architectures:</strong> MobileNet, NFNet, VGG, BERT</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Hardware</h3>
+          <div style="display:flex;gap:16px;align-items:center;margin-top:10px;flex-wrap:wrap;">
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-nvidia-original colored" style="font-size:28px;"></i> NVIDIA GPU</span>
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-raspberrypi-plain colored" style="font-size:28px;"></i> Raspberry Pi</span>
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-nvidia-original colored" style="font-size:28px;"></i> Jetson TX2</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Software</h3>
+          <div style="display:flex;gap:16px;align-items:center;margin-top:10px;flex-wrap:wrap;">
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-vscode-plain colored" style="font-size:28px;"></i> VS Code</span>
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-docker-plain colored" style="font-size:28px;"></i> Docker</span>
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-jupyter-plain colored" style="font-size:28px;"></i> Jupyter</span>
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-matlab-plain colored" style="font-size:28px;"></i> MATLAB</span>
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-anaconda-plain colored" style="font-size:28px;"></i> Anaconda</span>
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-pycharm-plain colored" style="font-size:28px;"></i> PyCharm</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Specialties</h3>
+          <div style="display:flex;gap:12px;align-items:center;margin-top:10px;flex-wrap:wrap;">
+            <span style="display:flex;align-items:center;gap:6px;"><span style="font-size:20px;">👁️</span> AOI</span>
+            <span style="display:flex;align-items:center;gap:6px;"><span style="font-size:20px;">🎯</span> Defect Detection</span>
+            <span style="display:flex;align-items:center;gap:6px;"><span style="font-size:20px;">✂️</span> Segmentation</span>
+            <span style="display:flex;align-items:center;gap:6px;"><span style="font-size:20px;">🚨</span> Anomaly Detection</span>
+            <span style="display:flex;align-items:center;gap:6px;"><span style="font-size:20px;">⚡</span> Real-time Optimization</span>
+            <span style="display:flex;align-items:center;gap:6px;"><span style="font-size:20px;">🏭</span> Industrial Deployment</span>
+          </div>
+        </article>
       </div>
     </section>
 
+    <!-- PUBLICATIONS -->
+    <section id="publications" class="section">
+      <div class="section-head">
+        <h2>Publications</h2>
+        <p>Peer-reviewed journals, conferences, and book chapters (grouped).</p>
+      </div>
+
+      <div class="grid2">
+        <article class="card">
+          <h3>Recent Journal Highlights</h3>
+          <ul class="clean-list muted">
+            <li>2025 — Energies: Explainable clustered federated learning for solar energy forecasting</li>
+            <li>2025 — Sensors: Shapley-based adaptive weighting for collaborative learning</li>
+            <li>2024 — Sensors: IoT healthcare with federated learning + VAE</li>
+            <li>2023 — IEEE TNSM: FedCLS aggregation method</li>
+            <li>2021 — Applied Sciences: Small traffic sign detection (YOLOv3 improvements)</li>
+          </ul>
+          <p class="muted" style="margin-top:10px;">Full lists below.</p>
+        </article>
+
+        <article class="card">
+          <h3>Conference & Book</h3>
+          <ul class="clean-list muted">
+            <li>ICUFN 2023 — Robust aggregation for heterogeneous federated learning</li>
+            <li>ICAIIC 2023 — Performance efficient global training in federated learning</li>
+            <li>ICTC 2022 — Communication efficient global training approach</li>
+            <li>Book Chapter (2021) — Impact of AI in cardiovascular disease</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="stack">
+
+        <details class="acc card">
+          <summary>
+            <span class="acc-title">Journal Publications</span>
+            <span class="acc-tag">View Full List</span>
+          </summary>
+
+          <div class="pub-grid">
+            <div class="pub-col">
+              <h4>2025</h4>
+              <ul class="clean-list muted">
+                <li>S. S. Ali, M. Ali, D.M.S. Bhatti, and B. J. Choi, “Explainable Clustered Federated Learning for Solar Energy Forecasting”, Energies, 2025.</li>
+                <li>D.M.S. Bhatti, M. Ali, J. Yoon and B. J. Choi, “Efficient Collaborative Learning in the Industrial IoT Using Federated Learning and Adaptive Weighting Based on Shapley Values”, Sensors, 2025.</li>
+                <li>S. S. Ali, M. Ali, D.M.S. Bhatti, and B. J. Choi, “dy-TACFL: Dynamic Temporal Adaptive Clustered Federated Learning for Heterogeneous Clients”, Electronics, 2025.</li>
+              </ul>
+
+              <h4>2024</h4>
+              <ul class="clean-list muted">
+                <li>D.M.S. Bhatti and B. J. Choi, “Enhancing IoT Healthcare with Federated Learning and Variational Autoencoder”, Sensors, 2024.</li>
+                <li>M. Haris, D. M. S. Bhatti and H. Nam, “A Fast-Convergent Hyperbolic Tangent PSO Algorithm for UAVs Path Planning”, IEEE Open Journal of Vehicular Technology, 2024.</li>
+                <li>D. Kumar et al., “Performance Evaluation of ARM-based versus x86-based Processors in High Performance Computing Clusters”, Journal of Independent Studies and Research Computing.</li>
+                <li>D. M. S. Bhatti, S. Dongho and H. Nam, “FedClstr: Clustered Federated Learning Under Imperfect Channel”, IEEE TETCI (Major Revision).</li>
+                <li>D. M. S. Bhatti and H. Nam, “Robust Communication-Efficient Layered Aggregation Method for Federated Learning”, IEEE Systems Journal (Major Revision).</li>
+                <li>D. M. S. Bhatti, M. S. Haroon, and H. Nam, “Leveraging Wireless Environment for Enhanced Performance in Federated Learning”, IEEE Transactions on Communications (Under review).</li>
+                <li>D. M. S. Bhatti, M. Haris, and H. Nam, “Tackling Privacy Concerns in imperfect communication-driven Federated Learning”, IEEE TNSM (Under review).</li>
+              </ul>
+
+              <h4>2023</h4>
+              <ul class="clean-list muted">
+                <li>D. M. S. Bhatti and H. Nam, “FedCLS: An Unbiased Aggregation Method for Federated Learning in a Heterogeneous Environment”, IEEE TNSM, 2023.</li>
+                <li>M. Ali et al., “Optimization of Spectrum Utilization Efficiency in Cognitive Radio Networks”, IEEE Wireless Communications Letters, 2023.</li>
+              </ul>
+
+              <h4>2022</h4>
+              <ul class="clean-list muted">
+                <li>D. M. S. Bhatti et al., “Detection and Spatial Correlation Analysis of Infectious Diseases Using WBAN Under Imperfect Wireless Channel”, Big Data, 2022.</li>
+              </ul>
+
+              <h4>2021</h4>
+              <ul class="clean-list muted">
+                <li>Y. Rehman et al., “Detection of Small Size Traffic Signs … in YOLOv3”, Applied Sciences, 2021.</li>
+                <li>D. M. S. Bhatti et al., “Machine learning based Cluster Formation in Vehicular Communication”, Telecommunication Systems, 2021.</li>
+              </ul>
+
+              <h4>2020</h4>
+              <ul class="clean-list muted">
+                <li>D.M.S. Bhatti et al., “Clustering Formation in Cognitive Radio Networks Using Machine Learning”, AEU, 2020.</li>
+              </ul>
+
+              <h4>2019</h4>
+              <ul class="clean-list muted">
+                <li>S. Ahmed, D.M.S. Bhatti and S. Kim, “Complexity Reduced Soft MIMO Detection Using Single Tree Search”, IJSAEM, 2019.</li>
+                <li>Z. U. Bhutto et al., “Efficient Method for SBI Estimation in Iterative Coded MIMO Systems”, IJCSNS, 2019.</li>
+              </ul>
+
+            </div>
+
+            <div class="pub-col">
+              <h4>2018</h4>
+              <ul class="clean-list muted">
+                <li>
+                  S. Ahmed, N. A. Kaimkhani, D.M.S. Bhatti, M. Sahar and K. Ali,
+                  “Virtual General Physician System using Artificial Intelligence”,
+                  <em>Broad Research in Artificial Intelligence and Neuroscience (BRAIN)</em>, Vol. 9 (4), pp. 154–160, Sep. 2018.
+                  <div class="muted">Coverage: ESCI; ISSN: 2067-3957</div>
+                </li>
+
+                <li>
+                  S. Ahmed, N. A. Kaimkhani, D.M.S. Bhatti, M. Zubair, H. B. Liaquat and A. Khan,
+                  “Surface Detection in Automobile using Sensors”,
+                  <em>International Journal of Computer Science and Network Security (IJCSNS)</em>, Vol. 18 (9), pp. 137–143, 2018.
+                  <div class="muted">Coverage: ESCI; ISSN: 1738-7906</div>
+                </li>
+
+                <li>
+                  S. B. H. Zaidi, D.M.S. Bhatti and Ihsan-Ullah,
+                  “Combinatorial Auctions for Energy Storage Sharing Amongst the Households”,
+                  <em>Journal of Energy Storage</em>, Vol. 19, pp. 291–301, Aug. 2018.
+                  <div class="muted">Coverage: SCIE; Impact Factor: 8.907; ISSN: 2352-152X</div>
+                </li>
+
+                <li>
+                  N. Saeed, H. Nam, M. I. U. Haq and D.M.S. Bhatti,
+                  “A survey on Multidimensional Scaling”,
+                  <em>ACM Computing Surveys</em>, Vol. 51 (3), May 2018.
+                  <div class="muted">Coverage: SCI; Impact Factor: 14.32; ISSN: 0360-0300</div>
+                </li>
+
+                <li>
+                  U. U. Rajput, F. Abbas, A. Hussain, D.M.S. Bhatti and A. M. Rajpar,
+                  “Privacy Preserving Authentication Approaches in VANET: Existing Challenges and Future Directions”,
+                  <em>International Journal of Computer Science and Network Security (IJCSNS)</em>, Vol. 18 (4), pp. 47–53, Apr. 2018.
+                  <div class="muted">Coverage: ESCI; ISSN: 1738-7906</div>
+                </li>
+
+                <li>
+                  N. A. Kaim Khani, S. Ahmed, D.M.S. Bhatti, M. Z. Tunio and S. Kim,
+                  “Study of MIMO Detection schemes for Emerging Wireless Communications”,
+                  <em>International Journal of Computer Science and Network Security (IJCSNS)</em>, Vol. 18 (3), pp. 142–149, Mar. 2018.
+                  <div class="muted">Coverage: ESCI; ISSN: 1738-7906</div>
+                </li>
+
+                <li>
+                  D.M.S. Bhatti, Saleem Ahmed, N. Saeed and B. Shaikh,
+                  “Efficient Error Detection in Soft Data Fusion for Cooperative Spectrum Sensing”,
+                  <em>AEU International Journal of Electronics and Communication</em>, Vol. 88, pp. 141–147, Feb. 2018.
+                  <div class="muted">Coverage: SCIE; Impact Factor: 3.169; ISSN: 1434-8411</div>
+                </li>
+              </ul>
+
+
+
+              <h4>2017</h4>
+              <ul class="clean-list muted">
+                <li>
+                  D.M.S. Bhatti and H. Nam,
+                  “Spatial Correlation based Analysis of Soft Combination and User Selection Algorithm for Cooperative Spectrum Sensing”,
+                  <em>IET Communications</em>, Vol. 11, pp. 39–44, 2017.
+                  <div class="muted">Coverage: SCI; Impact Factor: 1.779; ISSN: 1751-8628</div>
+                </li>
+
+                <li>
+                  F. C. K. Ngayahala, S. Ahmed, D. M. S. Bhatti, N. Saeed, M. Rashid and N. A. Kaimkhani,
+                  “Low-Complexity SIC-MMSE for Joint Multiple-input Multiple-output Detection”,
+                  <em>Springer Journal of Communications Technology and Electronics</em>, Vol. 62, no. 11, pp. 1248–1252, 2017.
+                  <div class="muted">Coverage: SCI; Impact Factor: 0.67; ISSN: 1064-2269</div>
+                </li>
+
+                <li>
+                  D.M.S. Bhatti, N. Saeed and H. Nam,
+                  “Fuzzy C-means Clustering and Energy Efficient Cluster Head Selection for Cooperative Sensor Network”,
+                  <em>Sensors</em>, Vol. 16, no. 9, Sep. 2016.
+                  <div class="muted">Coverage: SCIE; Impact Factor: 3.9; ISSN: 1424-8220</div>
+                </li>
+              </ul>
+
+              <h4>2016</h4>
+              <ul class="clean-list muted">
+                <li>
+                  N. Saeed. M. I. U Haq and D. M. S. Bhatti,
+                  “Efficient Localization Algorithm for Wireless Sensor Networks Using Levenberg-Marquardt Refinement”,
+                  <em>Ad hoc & Sensor Wireless Networks</em>, Vol. 34, pp. 245–256, 2016.
+                  <div class="muted">Coverage: SCIE; Impact Factor: 0.948; ISSN: 1551-9899</div>
+                </li>
+              </ul>
+              </p>
+            </div>
+          </div>
+        </details>
+
+        <details class="acc card">
+          <summary>
+            <span class="acc-title">Conference Proceedings</span>
+            <span class="acc-tag">View Full List</span>
+          </summary>
+
+          <h4>2023</h4>
+          <ul class="clean-list muted">
+            <li>D.M.S. Bhatti and H. Nam, “A Robust Aggregation Approach for Heterogeneous Federated Learning”, ICUFN 2023, Paris, France.</li>
+            <li>D.M.S. Bhatti and H. Nam, “A performance Efficient Approach of Global Training in Federated Learning”, ICAIIC 2023, Bali, Indonesia.</li>
+          </ul>
+
+          <h4>2022</h4>
+          <ul class="clean-list muted">
+            <li>D.M.S. Bhatti, M. Haris and H. Nam, “A Communication Efficient Approach of Global Training in Federated Learning,” ICTC 2022, Jeju, Korea.</li>
+            <li>M. Haris, D.M.S. Bhatti and H. Nam, “Improved PSO algorithm …”, ICTC 2022, Jeju, Korea.</li>
+          </ul>
+
+          <h4>2018 / 2017 / 2014</h4>
+          <ul class="clean-list muted">
+            <li>D.M.S. Bhatti, S. Ahmed and S. Kim, “Design of Cooperative Spectrum Sensing using MIMO …”, ISITC 2018, Jeonju, Korea.</li>
+            <li>D.M.S. Bhatti et al., “Channel Error Detection …”, ICTC 2018, Jeju, Korea.</li>
+            <li>W. Ahmad et al., “Localization Of VANETs …”, iComet 2018, Sukkur, Pakistan.</li>
+            <li>D.M.S. Bhatti et al., “Fuzzy C-means …”, ICTC 2017, Jeju, Korea.</li>
+            <li>D.M.S. Bhatti and H. Nam, “Correlation Based Soft Combining …”, IEEE VTC Spring 2014, Seoul.</li>
+          </ul>
+        </details>
+
+        <details class="acc card">
+          <summary>
+            <span class="acc-title">Book Chapter</span>
+            <span class="acc-tag">View Full List</span>
+          </summary>
+          <ul class="clean-list muted">
+            <li>M. Khan, S. Ahmed, P. Kumar and D.M.S. Bhatti, “Impact of Artificial Intelligence in Cardiovascular Disease,” Scrivener Publishing, 2021.</li>
+          </ul>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- SERVICE / MEMBERSHIPS / REVIEWING / ACADEMIC PROJECTS / AWARDS -->
+    <section id="service" class="section">
+      <div class="section-head">
+        <h2>Recognition</h2>
+        <p>Professional memberships, reviewing activity, funded academic projects, and awards.</p>
+      </div>
+
+      <div class="grid2">
+        <article class="card">
+          <h3>Professional Memberships</h3>
+          <ul class="clean-list muted">
+            <li>Senior Member — IEEE</li>
+            <li>Professional Engineer — Pakistan Engineering Council (PEC)</li>
+            <li>Global Member — KICS (Korean Institute of Communications and Information Sciences)</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Awards & Honors</h3>
+          <ul class="clean-list muted">
+            <li>Award for organizing MTSET-2017 (Pakistan).</li>
+            <li>HEC (GoP) Scholarship for MS–PhD study in South Korea.</li>
+          </ul>
+        </article>
+      </div>
+
+      <details class="acc card">
+        <summary>
+          <span class="acc-title">Reviewer of Journals</span>
+          <span class="acc-tag">View Full list</span>
+        </summary>
+        <ul class="clean-list muted cols">
+          <li>IEEE Transactions on Cybernetics</li>
+          <li>IEEE TETCI</li>
+          <li>IEEE TNSM</li>
+          <li>IEEE TASE</li>
+          <li>IET Signal Processing</li>
+          <li>Electronics Letters</li>
+          <li>Telecommunication Systems</li>
+          <li>IET Communications</li>
+          <li>IEEE Access</li>
+          <li>IET Radar, Sonar & Navigation</li>
+          <li>EURASIP JWCN</li>
+          <li>Wireless Personal Communications</li>
+          <li>Transactions on Emerging Telecommunications Technologies</li>
+          <li>Wireless Communication and Mobile Computing</li>
+          <li>Sensors</li>
+          <li>Mathematics</li>
+          <li>IEEE Systems Journal</li>
+          <li>IEEE Open Journal of the Communications Society</li>
+        </ul>
+      </details>
+
+      <details class="acc card">
+        <summary>
+          <span class="acc-title">Academic Projects</span>
+          <span class="acc-tag">View Full list</span>
+        </summary>
+        <ul class="clean-list muted">
+          <li>Deep Learning based Integrated MEC-HCRAN Model for 6G — funded by NRF (Brain Pool), South Korea.</li>
+          <li>Detection and Decoding in Coded MIMO System for 5G — funded by HEC, GoP.</li>
+          <li>Whole body fatigue evaluation using EMG and heart rate — funded by HEC, GoP.</li>
+          <li>Channel switching method in 5G for cognitive radio — funded by HEC, GoP.</li>
+          <li>Ultra-lightweight wearable devices via virtualization cloud computing — funded by NRF, South Korea.</li>
+          <li>Efficient coexistence of devices in ISM band — funded by Ministry of Science, Education and Technology, South Korea.</li>
+        </ul>
+      </details>
+    </section>
+
+    <!-- CONTACT -->
     <section id="contact" class="section">
       <div class="section-head">
         <h2>Contact</h2>
         <p>Let’s connect.</p>
       </div>
+
       <div class="card contact">
-        <a class="btn" href="mailto:saqibbhatti128@gmail.com">Email me</a>
-        <a class="ghost" href="https://github.com/YOURUSERNAME" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="ghost" href="https://www.linkedin.com/in/YOUR-LINKEDIN/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn" href="mailto:saqibbhatti128@gmail.com">Email</a>
+        <a class="ghost" href="https://github.com/drsaqibbhatti" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="ghost" href="https://www.linkedin.com/in/dr-saqib-bhatti-sr-member-ieee-21433b18/" target="_blank" rel="noreferrer">LinkedIn</a>
+
+        <!-- Phone (optional): consider removing until you are ready to publish -->
+        <a class="ghost" href="tel:+13237233653">📞 Call (US)</a>
+        <a class="ghost" href="tel:+821049971260">📞 Call (KR)</a>
+
+        <details class="more">
+          <summary class="ghost">More contact</summary>
+          <div class="more-box">
+            <p class="muted" style="margin:0 0 10px;">
+              <strong>Emails:</strong><br/>
+              <a class="link" href="mailto:saqibbhatti128@gmail.com">saqibbhatti128@gmail.com</a><br/>
+              <a class="link" href="mailto:saqib@hyvision.co.kr">saqib@hyvision.co.kr</a><br/>
+              <a class="link" href="mailto:saqib@hanyang.ac.kr">saqib@hanyang.ac.kr</a>
+            </p>
+            <p class="muted" style="margin:0;">
+              <strong>Phones:</strong><br/>
+              <span>+82-10-4997-1260</span><br/>
+              <span>+1-323-723-3653</span>
+            </p>
+          </div>
+        </details>
       </div>
     </section>
 
     <footer class="footer">
-      <p>© <span id="y"></span> Saqib Bhatti · Built with GitHub Pages</p>
+      <p>© <span id="y"></span> Dr. DM. Saqib Bhatti</p>
     </footer>
   </main>
-
   <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
+    document.querySelectorAll("details.acc summary a").forEach(a => {
+      a.addEventListener("click", (e) => e.stopPropagation());
+    });
+
+    // Theme System with Time-based Auto-switching
+    function setTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      updateThemeButtons(theme);
+    }
+
+    function updateThemeButtons(theme) {
+      const lightBtn = document.getElementById('lightBtn');
+      const darkBtn = document.getElementById('darkBtn');
+      
+      if (theme === 'light') {
+        lightBtn.classList.add('active');
+        darkBtn.classList.remove('active');
+      } else {
+        darkBtn.classList.add('active');
+        lightBtn.classList.remove('active');
+      }
+    }
+
+    function getAutoTheme() {
+      const hour = new Date().getHours();
+      // Light mode: 6 AM to 6 PM (6-18)
+      // Dark mode: 6 PM to 6 AM (18-24, 0-6)
+      return (hour >= 6 && hour < 18) ? 'light' : 'dark';
+    }
+
+    // Initialize theme on page load
+    (function initTheme() {
+      const savedTheme = localStorage.getItem('theme');
+      const theme = savedTheme || getAutoTheme();
+      setTheme(theme);
+    })();
   </script>
+
 </body>
 </html>

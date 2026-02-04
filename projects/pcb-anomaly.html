@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PCB Board Defects with Anomaly Detection — Dr. Saqib Bhatti</title>
+  <meta name="description" content="PCB anomaly detection using heatmap-based localization with minimal defect labels." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="bg"></div>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="../index.html">← Back<span>.</span></a>
+      <nav class="links">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#contact" class="btn">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <div class="section-head">
+        <h2>PCB Board Defects with Anomaly Detection</h2>
+        <p>Heatmap anomaly localization · Reduced labeling · Production-friendly post-processing</p>
+      </div>
+
+      <div class="card" style="padding:18px;">
+        <h3 style="margin-top:0;">Overview</h3>
+        <p class="muted">
+          This project targets defect detection on PCB boards (e.g., short circuits, missing/extra patterns, irregular traces)
+          where labeled defect samples are limited. The system produces pixel-level anomaly heatmaps and a final OK/NG decision
+          using robust scoring and post-processing.
+        </p>
+
+        <div class="tags" style="margin-top:14px">
+          <span style="display:inline-flex;align-items:center;gap:6px;"><span style="font-size:16px;">🚨</span> Anomaly Detection</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><span style="font-size:16px;">🗺️</span> Heatmap</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><i class="devicon-pytorch-original colored" style="font-size:16px;"></i> PyTorch</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><i class="devicon-opencv-plain colored" style="font-size:16px;"></i> OpenCV</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><i class="devicon-numpy-plain colored" style="font-size:16px;"></i> NumPy</span>
+        </div>
+      </div>
+
+      <div class="grid two" style="margin-top:14px;">
+        <div class="card" style="padding:18px;">
+          <h3 style="margin-top:0;">Problem</h3>
+          <ul class="bullets">
+            <li>Defects are rare and diverse → hard to collect balanced labeled datasets.</li>
+            <li>Small defects need localization, not only classification.</li>
+            <li>Variations in lighting/PCB layouts can cause false alarms.</li>
+          </ul>
+        </div>
+
+        <div class="card" style="padding:18px;">
+          <h3 style="margin-top:0;">Solution</h3>
+          <ul class="bullets">
+            <li>Train mainly on normal samples (unsupervised/weakly-supervised anomaly learning).</li>
+            <li>Generate anomaly heatmaps → localize suspicious regions.</li>
+            <li>Compute defect score from ROI heatmap stats (max/mean) and apply tuned thresholds.</li>
+            <li>Post-processing: smoothing + morphology + connected components for stable decisions.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid two" style="margin-top:14px;">
+        <div class="card" style="padding:18px;">
+          <h3 style="margin-top:0;">My Role</h3>
+          <ul class="bullets">
+            <li>Designed the end-to-end anomaly pipeline producing heatmap-based defect localization.</li>
+            <li>Handled limited labels with anomaly learning strategy and strict validation.</li>
+            <li>Optimized post-processing and thresholds for robust decisions in production.</li>
+          </ul>
+        </div>
+
+        <div class="card" style="padding:18px;">
+          <h3 style="margin-top:0;">Implementation</h3>
+          <p class="muted" style="display:flex;align-items:center;gap:8px;"><i class="devicon-python-plain colored" style="font-size:20px;"></i> <strong>Language:</strong> Python</p>
+          <p class="muted"><strong>Libraries:</strong></p>
+          <div style="display:flex;gap:12px;align-items:center;margin-top:8px;flex-wrap:wrap;">
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-pytorch-original colored" style="font-size:20px;"></i> PyTorch</span>
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-opencv-plain colored" style="font-size:20px;"></i> OpenCV</span>
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-numpy-plain colored" style="font-size:20px;"></i> NumPy</span>
+          </div>
+          <p class="muted" style="margin-top:12px;"><strong>Outputs:</strong> Heatmap · Binary mask · Defect score · OK/NG decision</p>
+          <p class="muted"><strong>Deployment notes:</strong> ROI cropping + threshold tuning per PCB type for stable performance</p>
+        </div>
+      </div>
+
+      <div class="card" style="padding:18px; margin-top:14px;">
+        <h3 style="margin-top:0;">Anomaly Map Gallery</h3>
+
+        <div class="gallery">
+          <figure class="shot">
+            <img src="../assets/projects/pcb-anomaly/anom1.png" alt="PCB anomaly heatmap example 1" loading="lazy" />
+            <figcaption class="muted">Case 1 — Scratch</figcaption>
+          </figure>
+
+          <figure class="shot">
+            <img src="../assets/projects/pcb-anomaly/anom2.png" alt="PCB anomaly heatmap example 2" loading="lazy" />
+            <figcaption class="muted">Case 2 — Localized defect region</figcaption>
+          </figure>
+
+          <figure class="shot">
+            <img src="../assets/projects/pcb-anomaly/anom3.png" alt="PCB anomaly heatmap example 3" loading="lazy" />
+            <figcaption class="muted">Case 3 — Localized defect region</figcaption>
+          </figure>
+
+          <figure class="shot">
+            <img src="../assets/projects/pcb-anomaly/anom4.png" alt="PCB anomaly heatmap example 4" loading="lazy" />
+            <figcaption class="muted">Case 4 — Scratch</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="card" style="padding:18px; margin-top:14px;">
+        <h3 style="margin-top:0;">Training Demo</h3>
+        <p class="muted">Short clip showing the training process / anomaly map learning.</p>
+
+        <video class="vid" autoplay loop muted playsinline preload="metadata">
+          <source src="../assets/projects/pcb-anomaly/AnomalyFinal.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- <div class="card" style="padding:18px; margin-top:14px;">
+        <h3 style="margin-top:0;">What you can add next</h3>
+        <ul class="bullets">
+          <li><strong>Metrics:</strong> AUC / Precision-Recall / false alarm rate (if you share numbers)</li>
+          <li><strong>Before/After:</strong> Original image + heatmap + mask + final decision</li>
+          <li><strong>Short demo video:</strong> embedded or linked</li>
+        </ul>
+      </div> -->
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="y"></span> Dr. Saqib Bhatti</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

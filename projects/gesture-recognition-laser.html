@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gesture Recognition System for Laser Machine Safety — Dr. Saqib Bhatti</title>
+  <meta name="description" content="Two-stage safety system with ToF detection and 3D time-series gesture classification for laser machine control." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="bg"></div>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="../index.html">← Back<span>.</span></a>
+      <nav class="links">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#contact" class="btn">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <div class="section-head">
+        <h2>Gesture Recognition System for Laser Machine Safety Control</h2>
+        <p>ToF detection · 6 gesture classes · Time-series classification · Real-time safety</p>
+      </div>
+
+      <div class="card" style="padding:18px;">
+        <h3 style="margin-top:0;">Overview</h3>
+        <p class="muted">
+          Two-stage safety system for laser machine control: human detection stage followed by 3D time-series gesture classification. 
+          Recognizes 6 different gestures using Time-of-Flight (ToF) sensor data with low latency for real-time safety control.
+        </p>
+
+        <div class="tags" style="margin-top:14px">
+          <span style="display:inline-flex;align-items:center;gap:6px;"><span style="font-size:16px;">✋</span> Gesture Recognition</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><span style="font-size:16px;">🎯</span> Detection</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><span style="font-size:16px;">📊</span> Time-series</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><i class="devicon-python-plain colored" style="font-size:16px;"></i> Python</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><i class="devicon-pytorch-original colored" style="font-size:16px;"></i> PyTorch</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><i class="devicon-opencv-plain colored" style="font-size:16px;"></i> OpenCV</span>
+        </div>
+      </div>
+
+      <div class="grid two" style="margin-top:14px;">
+        <div class="card" style="padding:18px;">
+          <h3 style="margin-top:0;">Problem</h3>
+          <ul class="bullets">
+            <li>Safety-critical application requiring near-zero latency.</li>
+            <li>Need to distinguish 6 different gesture classes reliably.</li>
+            <li>3D ToF data requires specialized time-series processing.</li>
+            <li>False positives could cause production disruption.</li>
+          </ul>
+        </div>
+
+        <div class="card" style="padding:18px;">
+          <h3 style="margin-top:0;">Solution</h3>
+          <ul class="bullets">
+            <li>Two-stage pipeline: human detection → gesture classification.</li>
+            <li>Time-series classifier designed for 6 gesture classes from ToF data.</li>
+            <li>Latency reduction through optimized inference pipeline.</li>
+            <li>Robust validation under various operational conditions.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid two" style="margin-top:14px;">
+        <div class="card" style="padding:18px;">
+          <h3 style="margin-top:0;">My Role</h3>
+          <ul class="bullets">
+            <li>Built human detection stage and gesture pipeline with ToF data.</li>
+            <li>Designed time-series classifier for 6 gesture classes.</li>
+            <li>Optimized latency reduction for real-time safety control.</li>
+            <li>Validated system under production environment conditions.</li>
+          </ul>
+        </div>
+
+        <div class="card" style="padding:18px;">
+          <h3 style="margin-top:0;">Implementation</h3>
+          <p class="muted" style="display:flex;align-items:center;gap:8px;"><i class="devicon-python-plain colored" style="font-size:20px;"></i> <strong>Language:</strong> Python</p>
+          <p class="muted"><strong>Libraries:</strong></p>
+          <div style="display:flex;gap:12px;align-items:center;margin-top:8px;flex-wrap:wrap;">
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-pytorch-original colored" style="font-size:20px;"></i> PyTorch</span>
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-opencv-plain colored" style="font-size:20px;"></i> OpenCV</span>
+          </div>
+          <p class="muted" style="margin-top:12px;"><strong>Sensor:</strong> Time-of-Flight (ToF) camera</p>
+          <p class="muted"><strong>Gestures:</strong> 6 classes for laser machine control</p>
+        </div>
+      </div>
+
+      <div class="card" style="padding:18px; margin-top:14px;">
+        <h3 style="margin-top:0;">Results Gallery</h3>
+        <p class="muted">Gesture recognition examples with ToF visualization.</p>
+
+        <div class="gallery">
+          <p class="muted" style="text-align:center;padding:40px;">Images to be added</p>
+        </div>
+      </div>
+
+      <div class="card" style="padding:18px; margin-top:14px;">
+        <h3 style="margin-top:0;">Demo Video</h3>
+        <p class="muted">Real-time gesture recognition system demonstration.</p>
+        
+        <p class="muted" style="text-align:center;padding:40px;">Video to be added</p>
+      </div>
+
+      <div class="card" style="padding:18px; margin-top:14px;">
+        <h3 style="margin-top:0;">End Result</h3>
+        <ul class="bullets">
+          <li>Real-time safety gesture recognition system for laser machines.</li>
+          <li>Low-latency classification suitable for safety-critical applications.</li>
+          <li>Robust performance across 6 gesture classes with ToF data.</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="y"></span> Dr. Saqib Bhatti</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

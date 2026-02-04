@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AOI System for Apple iPhone Front Glass Surface Inspection — Dr. Saqib Bhatti</title>
+  <meta name="description" content="iPhone front glass AOI system with 14 defect classes using YOLOv11 and SegNExt for real-time inspection." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="bg"></div>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="../index.html">← Back<span>.</span></a>
+      <nav class="links">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#contact" class="btn">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <div class="section-head">
+        <h2>AOI System for Apple iPhone Front Glass Surface Inspection</h2>
+        <p>14 defect classes · YOLOv11 + SegNExt · TensorRT optimization · Real-time production deployment</p>
+      </div>
+
+      <div class="card" style="padding:18px;">
+        <h3 style="margin-top:0;">Overview</h3>
+        <p class="muted">
+          Advanced AOI system for iPhone front glass surface inspection detecting 14 types of defects including scratches, particles, 
+          contamination, pinholes, and surface anomalies. Hybrid approach combining object detection (YOLOv11) and segmentation (SegNExt) 
+          optimized with TensorRT for real-time manufacturing deployment.
+        </p>
+
+        <div class="tags" style="margin-top:14px">
+          <span style="display:inline-flex;align-items:center;gap:6px;"><span style="font-size:16px;">🎯</span> Object Detection</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><span style="font-size:16px;">🔬</span> Segmentation</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><span style="font-size:16px;">⚡</span> TensorRT</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><i class="devicon-python-plain colored" style="font-size:16px;"></i> Python</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><i class="devicon-pytorch-original colored" style="font-size:16px;"></i> PyTorch</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><i class="devicon-opencv-plain colored" style="font-size:16px;"></i> OpenCV</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><span style="font-size:16px;">🅲#</span> C#</span>
+        </div>
+      </div>
+
+      <div class="grid two" style="margin-top:14px;">
+        <div class="card" style="padding:18px;">
+          <h3 style="margin-top:0;">Problem</h3>
+          <ul class="bullets">
+            <li>14 different defect types requiring both detection and precise localization.</li>
+            <li>High-throughput production requires real-time inference speed.</li>
+            <li>Small defects (pinholes, particles) need pixel-level accuracy.</li>
+            <li>Reflective glass surfaces create challenging inspection conditions.</li>
+          </ul>
+        </div>
+
+        <div class="card" style="padding:18px;">
+          <h3 style="margin-top:0;">Solution</h3>
+          <ul class="bullets">
+            <li>Hybrid inspection: YOLOv11 for fast detection + SegNExt for precise segmentation.</li>
+            <li>Multi-class defect recognition covering all 14 defect categories.</li>
+            <li>TensorRT optimization for real-time performance in production.</li>
+            <li>Custom training with augmentation for robustness against reflections.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid two" style="margin-top:14px;">
+        <div class="card" style="padding:18px;">
+          <h3 style="margin-top:0;">My Role</h3>
+          <ul class="bullets">
+            <li>Designed and integrated hybrid inspection pipeline (detection + segmentation).</li>
+            <li>Customized YOLOv11 and SegNExt architectures for multi-class defect recognition.</li>
+            <li>Applied TensorRT optimization for real-time deployment.</li>
+            <li>Validated system performance under production constraints and variations.</li>
+          </ul>
+        </div>
+
+        <div class="card" style="padding:18px;">
+          <h3 style="margin-top:0;">Implementation</h3>
+          <p class="muted" style="display:flex;align-items:center;gap:8px;"><i class="devicon-python-plain colored" style="font-size:20px;"></i> <strong>Languages:</strong> Python & C#</p>
+          <p class="muted"><strong>Libraries:</strong></p>
+          <div style="display:flex;gap:12px;align-items:center;margin-top:8px;flex-wrap:wrap;">
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-pytorch-original colored" style="font-size:20px;"></i> PyTorch</span>
+            <span style="display:flex;align-items:center;gap:6px;"><span style="font-size:20px;">⚡</span> TensorRT</span>
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-opencv-plain colored" style="font-size:20px;"></i> OpenCV</span>
+          </div>
+          <p class="muted" style="margin-top:12px;"><strong>Models:</strong> YOLOv11, SegNExt</p>
+          <p class="muted"><strong>Defect Classes:</strong> Scratches, particles, contamination, pinholes, cracks, chips, bubbles, and more (14 total)</p>
+        </div>
+      </div>
+
+      <div class="card" style="padding:18px; margin-top:14px;">
+        <h3 style="margin-top:0;">Results Gallery</h3>
+        <p class="muted">Detection and segmentation results showing various defect types.</p>
+
+        <div class="gallery">
+          <!-- Add your images here -->
+          <!-- Example:
+          <figure class="shot">
+            <img src="../assets/projects/iphone-front-glass/result1.png" alt="Defect detection example 1" loading="lazy" />
+            <figcaption class="muted">Scratch detection</figcaption>
+          </figure>
+          -->
+          <p class="muted" style="text-align:center;padding:40px;">Images to be added</p>
+        </div>
+      </div>
+
+      <div class="card" style="padding:18px; margin-top:14px;">
+        <h3 style="margin-top:0;">Demo Video</h3>
+        <p class="muted">Real-time inspection system in action.</p>
+        
+        <!-- Add your video here -->
+        <!-- Example:
+        <video class="vid" autoplay loop muted playsinline preload="metadata">
+          <source src="../assets/projects/iphone-front-glass/demo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        -->
+        <p class="muted" style="text-align:center;padding:40px;">Video to be added</p>
+      </div>
+
+      <div class="card" style="padding:18px; margin-top:14px;">
+        <h3 style="margin-top:0;">End Result</h3>
+        <ul class="bullets">
+          <li>Fast and highly accurate multi-class inspection system (14 defect types).</li>
+          <li>Production-grade speed and robustness for high-throughput manufacturing.</li>
+          <li>Real-time TensorRT-optimized inference suitable for inline inspection.</li>
+          <li>Deployed successfully in Apple manufacturing environment.</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="y"></span> Dr. Saqib Bhatti</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>iPhone Backside Panel Inspection System — Dr. Saqib Bhatti</title>
+  <meta name="description" content="End-to-end defect detection, measurement, and severity grading (A-D) for iPhone backside panels." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="bg"></div>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="../index.html">← Back<span>.</span></a>
+      <nav class="links">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#contact" class="btn">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <div class="section-head">
+        <h2>End-to-End System for iPhone Backside Panel Inspection</h2>
+        <p>Defect detection · Size measurement · Severity grading (A–D)</p>
+      </div>
+
+      <div class="card" style="padding:18px;">
+        <h3 style="margin-top:0;">Overview</h3>
+        <p class="muted">
+          Complete inspection pipeline that detects defects, measures their size, and grades severity from A to D. 
+          Multi-stage system combining detection, measurement, and classification for automated quality control.
+        </p>
+
+        <div class="tags" style="margin-top:14px">
+          <span style="display:inline-flex;align-items:center;gap:6px;"><span style="font-size:16px;">🎯</span> Detection</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><span style="font-size:16px;">📏</span> Measurement</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><span style="font-size:16px;">📊</span> Grading</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><i class="devicon-python-plain colored" style="font-size:16px;"></i> Python</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><i class="devicon-opencv-plain colored" style="font-size:16px;"></i> OpenCV</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><i class="devicon-pytorch-original colored" style="font-size:16px;"></i> PyTorch</span>
+        </div>
+      </div>
+
+      <div class="grid two" style="margin-top:14px;">
+        <div class="card" style="padding:18px;">
+          <h3 style="margin-top:0;">Problem</h3>
+          <ul class="bullets">
+            <li>Need for automated severity classification beyond binary OK/NG.</li>
+            <li>Defect size measurement required for grading criteria.</li>
+            <li>Varying surface appearance affects detection consistency.</li>
+            <li>Multiple defect types with different severity thresholds.</li>
+          </ul>
+        </div>
+
+        <div class="card" style="padding:18px;">
+          <h3 style="margin-top:0;">Solution</h3>
+          <ul class="bullets">
+            <li>Multi-stage pipeline: detection → measurement → grading.</li>
+            <li>Severity classification (A–D) based on size and criteria.</li>
+            <li>Robust feature extraction for varying surface appearance.</li>
+            <li>Automated decision support for quality control.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid two" style="margin-top:14px;">
+        <div class="card" style="padding:18px;">
+          <h3 style="margin-top:0;">My Role</h3>
+          <ul class="bullets">
+            <li>Designed multi-stage inspection with detection + measurement.</li>
+            <li>Implemented severity classification based on size/criteria.</li>
+            <li>Improved robustness for varying surface appearance.</li>
+            <li>Validated grading accuracy against human inspection standards.</li>
+          </ul>
+        </div>
+
+        <div class="card" style="padding:18px;">
+          <h3 style="margin-top:0;">Implementation</h3>
+          <p class="muted" style="display:flex;align-items:center;gap:8px;"><i class="devicon-python-plain colored" style="font-size:20px;"></i> <strong>Language:</strong> Python</p>
+          <p class="muted"><strong>Libraries:</strong></p>
+          <div style="display:flex;gap:12px;align-items:center;margin-top:8px;flex-wrap:wrap;">
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-opencv-plain colored" style="font-size:20px;"></i> OpenCV</span>
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-pytorch-original colored" style="font-size:20px;"></i> PyTorch</span>
+          </div>
+          <p class="muted" style="margin-top:12px;"><strong>Severity Grades:</strong> A (minor) → D (severe)</p>
+        </div>
+      </div>
+
+      <div class="card" style="padding:18px; margin-top:14px;">
+        <h3 style="margin-top:0;">Results Gallery</h3>
+        <div class="gallery">
+          <p class="muted" style="text-align:center;padding:40px;">Images to be added</p>
+        </div>
+      </div>
+
+      <div class="card" style="padding:18px; margin-top:14px;">
+        <h3 style="margin-top:0;">End Result</h3>
+        <ul class="bullets">
+          <li>Accurate defect grading and automated decision support.</li>
+          <li>Consistent severity classification across production batches.</li>
+          <li>Reduced manual inspection time and improved QA consistency.</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="y"></span> Dr. Saqib Bhatti</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
