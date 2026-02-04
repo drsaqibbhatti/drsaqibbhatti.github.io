@@ -175,7 +175,7 @@ body{
 .sub{color:var(--muted); font-size:16px; line-height:1.6; margin:0 0 16px}
 
 .grad{
-  background: linear-gradient(90deg, rgba(99,102,241,1), rgba(16,185,129,1), rgba(236,72,153,1));
+  background: linear-gradient(120deg, #3B82F6, #0ea5a4);
   -webkit-background-clip:text;
   background-clip:text;
   color:transparent;
@@ -255,6 +255,28 @@ body{
   color: var(--muted);
   font-weight:800;
   font-size:12px;
+}
+
+.pub-link{
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 8px;
+  padding: 2px 8px;
+  background: rgba(14, 165, 164, 0.08);
+  border: 1px solid rgba(14, 165, 164, 0.3);
+  border-radius: 6px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  transition: all 0.2s;
+}
+
+.pub-link:hover{
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  transform: translateY(-1px);
 }
 
 .hero-meta{

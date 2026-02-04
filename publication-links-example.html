@@ -1,0 +1,50 @@
+<!-- EXAMPLE: How to add publication links to your papers -->
+
+<!-- Step 1: Add this CSS to your style.css file (already done ✓) -->
+<style>
+.pub-link{
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 8px;
+  padding: 2px 8px;
+  background: rgba(14, 165, 164, 0.08);
+  border: 1px solid rgba(14, 165, 164, 0.3);
+  border-radius: 6px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  transition: all 0.2s;
+}
+
+.pub-link:hover{
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  transform: translateY(-1px);
+}
+</style>
+
+<!-- Step 2: Add links to each publication like this: -->
+
+<h4>2025</h4>
+<ul class="clean-list muted">
+  <!-- BEFORE: -->
+  <li>S. S. Ali, M. Ali, D.M.S. Bhatti, and B. J. Choi, "Explainable Clustered Federated Learning for Solar Energy Forecasting", Energies, 2025.</li>
+  
+  <!-- AFTER: Add the link at the end -->
+  <li>S. S. Ali, M. Ali, D.M.S. Bhatti, and B. J. Choi, "Explainable Clustered Federated Learning for Solar Energy Forecasting", Energies, 2025. <a href="https://doi.org/10.3390/YOUR_DOI_HERE" class="pub-link" target="_blank">View →</a></li>
+  
+  <!-- Another example: -->
+  <li>D.M.S. Bhatti, M. Ali, J. Yoon and B. J. Choi, "Efficient Collaborative Learning in the Industrial IoT Using Federated Learning and Adaptive Weighting Based on Shapley Values", Sensors, 2025. <a href="https://www.mdpi.com/YOUR_LINK_HERE" class="pub-link" target="_blank">View →</a></li>
+</ul>
+
+<!-- Step 3: Replace "#" or "YOUR_DOI_HERE" with actual publication URLs -->
+<!-- Examples of valid URLs:
+  - DOI: https://doi.org/10.3390/s25010001
+  - Google Scholar: https://scholar.google.com/...
+  - ResearchGate: https://www.researchgate.net/publication/...
+  - Journal direct link: https://www.mdpi.com/1424-8220/25/1/1
+-->
+
+<!-- Step 4: Repeat for all publications -->
