@@ -95,8 +95,21 @@
         <h3 style="margin-top:0;">Results Gallery</h3>
         <p class="muted">Gesture recognition examples with ToF visualization.</p>
 
-        <div class="gallery">
-          <p class="muted" style="text-align:center;padding:40px;">Images to be added</p>
+        <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:16px; margin-top:16px;">
+          <!-- Column 1: GestureVideo3 alone -->
+          <div style="display:flex; justify-content:center; align-items:start;">
+            <video autoplay loop muted playsinline style="width:81%; border-radius:8px;">
+              <source src="../assets/projects/gesture-recognition-laser/GestureVideo3.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <!-- Column 2: GestureVideo4 and Image1 -->
+          <div style="display:flex; flex-direction:column; gap:16px;">
+            <video autoplay loop muted playsinline style="width:100%; border-radius:8px;">
+              <source src="../assets/projects/gesture-recognition-laser/GestureVideo4.mp4" type="video/mp4">
+            </video>
+            <img src="../assets/projects/gesture-recognition-laser/Image1.png" alt="Gesture recognition result" style="width:100%; border-radius:8px;" />
+          </div>
         </div>
       </div>
 
@@ -104,7 +117,14 @@
         <h3 style="margin-top:0;">Demo Video</h3>
         <p class="muted">Real-time gesture recognition system demonstration.</p>
         
-        <p class="muted" style="text-align:center;padding:40px;">Video to be added</p>
+        <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:16px; margin-top:16px;">
+          <video autoplay loop muted playsinline style="width:100%; border-radius:8px;">
+            <source src="../assets/projects/gesture-recognition-laser/GestureVideo1.mp4" type="video/mp4">
+          </video>
+          <video autoplay loop muted playsinline style="width:100%; border-radius:8px;">
+            <source src="../assets/projects/gesture-recognition-laser/GestureVideo2.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
 
       <div class="card" style="padding:18px; margin-top:14px;">
