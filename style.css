@@ -86,13 +86,34 @@ body{
   flex-wrap:wrap;
   justify-content:flex-end;
 }
-.links a:not(.btn){
+.links a:not(.btn):not(.nav-btn-transparent){
   color:var(--muted);
   text-decoration:none;
   font-weight:700;
   font-size:15px;
 }
-.links a:not(.btn):hover{color:var(--text)}
+.links a:not(.btn):not(.nav-btn-transparent):hover{color:var(--text)}
+
+.nav-btn-transparent{
+  padding: 8px 16px;
+  background: rgba(14, 165, 164, 0.08);
+  border: 1.5px solid rgba(14, 165, 164, 0.3);
+  border-radius: 8px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(4px);
+  position: relative;
+}
+.nav-btn-transparent:hover{
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  transform: translateY(-1px);
+  border-color: var(--btn-bg);
+  box-shadow: 0 2px 8px rgba(14, 165, 164, 0.2);
+}
 
 .theme-toggle{
   display:flex;
@@ -123,8 +144,11 @@ body{
 
 .hero{padding:64px 0 18px}
 .section{padding:48px 0}
-.section-head{display:flex; flex-direction:column; gap:6px; margin-bottom:14px}
-.section-head h2{margin:0; font-size:22px}
+.section-head{
+  text-align:center;
+  margin-bottom:36px;
+}
+.section-head h2{margin:0 0 8px; font-size:2.4rem}
 .section-head p{margin:0; color:var(--muted)}
 
 .card{
@@ -140,6 +164,13 @@ body{
   font-size:44px;
   line-height:1.05;
   letter-spacing:-.8px;
+}
+.subtitle{
+  color:var(--text); 
+  font-size:18px; 
+  font-weight:700;
+  margin:8px 0 16px;
+  letter-spacing:0.5px;
 }
 .sub{color:var(--muted); font-size:16px; line-height:1.6; margin:0 0 16px}
 
@@ -178,20 +209,42 @@ body{
 .btn{
   background:var(--btn-bg);
   color:var(--btn-text);
-  border:1px solid var(--border);
+  border:2px solid var(--btn-bg);
+  transition:all 0.2s;
+  box-shadow: 0 2px 8px rgba(14, 165, 164, 0.2);
 }
 .btn:hover{
+  background:var(--btn-bg);
+  color:var(--btn-text);
   opacity:0.9;
-  transform:translateY(-1px);
-  transition:all 0.2s;
+  transform:translateY(-2px);
+  box-shadow: 0 4px 12px rgba(14, 165, 164, 0.3);
 }
 .ghost{
   color: var(--text);
-  background: var(--card);
-  border: 1px solid var(--border);
+  background: rgba(14, 165, 164, 0.08);
+  border: 1.5px solid rgba(14, 165, 164, 0.3);
   cursor:pointer;
+  transition:all 0.2s;
+  position: relative;
 }
-.ghost:hover{opacity:0.8}
+.ghost::after{
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+.ghost:hover::after{
+  border-color: var(--btn-bg);
+}
+.ghost:hover{
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  transform:translateY(-2px);
+  box-shadow: 0 4px 12px rgba(14, 165, 164, 0.2);
+}
 
 .mini{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
 .pill{
