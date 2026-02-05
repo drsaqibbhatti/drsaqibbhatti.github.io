@@ -220,6 +220,15 @@ body{
   transform:translateY(-2px);
   box-shadow: 0 4px 12px rgba(14, 165, 164, 0.3);
 }
+.btn:focus:not(:focus-visible) {
+  outline: none;
+}
+.btn:focus {
+  box-shadow: 0 2px 8px rgba(14, 165, 164, 0.2);
+}
+.btn:active {
+  transform: translateY(0);
+}
 .ghost{
   color: var(--text);
   background: rgba(14, 165, 164, 0.08);
