@@ -13,6 +13,119 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
+
+<style>
+  .chat-fab{
+    position:fixed; right:18px; bottom:18px; z-index:9999;
+    border:0; border-radius:999px; padding:12px 14px;
+    font-weight:800; cursor:pointer;
+    background:rgba(255,255,255,.92); color:#070A12;
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
+  }
+  .chatbox{
+    position:fixed; right:18px; bottom:70px; z-index:9999;
+    width:min(380px, calc(100vw - 36px));
+    height:520px; display:none;
+    border-radius:18px; overflow:hidden;
+    border:1px solid rgba(255,255,255,.12);
+    background:rgba(10,12,20,.92);
+    box-shadow:0 18px 60px rgba(0,0,0,.35);
+  }
+  .chatbox header{
+    padding:12px 14px; font-weight:900;
+    display:flex; justify-content:space-between; align-items:center;
+    border-bottom:1px solid rgba(255,255,255,.10);
+    color:rgba(255,255,255,.9);
+  }
+  .chatbox header button{
+    border:0; background:transparent; color:rgba(255,255,255,.75);
+    font-size:18px; cursor:pointer;
+  }
+  .chatlog{ padding:12px 14px; height:410px; overflow:auto; color:rgba(255,255,255,.9); }
+  .msg{ margin:10px 0; padding:10px 12px; border-radius:14px; line-height:1.35; }
+  .me{ background:rgba(255,255,255,.10); }
+  .bot{ background:rgba(99,102,241,.18); }
+  .chatinput{ display:flex; gap:8px; padding:12px; border-top:1px solid rgba(255,255,255,.10); }
+  .chatinput input{
+    flex:1; border-radius:12px; border:1px solid rgba(255,255,255,.14);
+    background:rgba(255,255,255,.06); color:rgba(255,255,255,.92);
+    padding:10px 12px; outline:none;
+  }
+  .chatinput button{
+    border:0; border-radius:12px; padding:10px 12px; font-weight:900;
+    background:rgba(255,255,255,.92); color:#070A12; cursor:pointer;
+  }
+</style>
+
+<button class="chat-fab" id="chatFab">Ask Saqib's AI Assistant 🤖</button>
+
+<div class="chatbox" id="chatBox">
+  <header>
+    <span>Saqib AI</span>
+    <button id="chatClose" aria-label="Close">✕</button>
+  </header>
+  <div class="chatlog" id="chatLog">
+    <div class="msg bot">Hi! Ask me about Saqib’s resume, projects, publications, or skills.</div>
+  </div>
+  <div class="chatinput">
+    <input id="chatInput" placeholder="Type a question..." />
+    <button id="chatSend">Send</button>
+  </div>
+</div>
+
+<script>
+  const WORKER_URL = "https://saqib.saqibbhatti128.workers.dev";
+
+  const fab = document.getElementById("chatFab");
+  const box = document.getElementById("chatBox");
+  const closeBtn = document.getElementById("chatClose");
+  const log = document.getElementById("chatLog");
+  const input = document.getElementById("chatInput");
+  const sendBtn = document.getElementById("chatSend");
+
+  function addMsg(text, who){
+    const d = document.createElement("div");
+    d.className = "msg " + who;
+    d.textContent = text;
+    log.appendChild(d);
+    log.scrollTop = log.scrollHeight;
+  }
+
+  async function send(){
+    const text = input.value.trim();
+    if(!text) return;
+    input.value = "";
+    addMsg(text, "me");
+
+    const typing = document.createElement("div");
+    typing.className = "msg bot";
+    typing.textContent = "Typing…";
+    log.appendChild(typing);
+    log.scrollTop = log.scrollHeight;
+
+    try{
+      const r = await fetch(WORKER_URL, {
+        method:"POST",
+        headers:{ "Content-Type":"application/json" },
+        body: JSON.stringify({ message: text })
+      });
+      const data = await r.json();
+      typing.remove();
+      addMsg(data.reply || (data.error ? ("Error: " + data.error) : "No reply returned."), "bot");
+    }catch(e){
+      typing.remove();
+      addMsg("Network error. Please try again.", "bot");
+    }
+  }
+
+  fab.addEventListener("click", ()=>{ box.style.display="block"; input.focus(); });
+  closeBtn.addEventListener("click", ()=>{ box.style.display="none"; });
+  sendBtn.addEventListener("click", send);
+  input.addEventListener("keydown", (e)=>{ if(e.key==="Enter") send(); });
+</script>
+
+
+
 <body>
   <div class="bg"></div>
 
@@ -786,7 +899,7 @@
                 <li>D. M. S. Bhatti, S. Dongho, Y. Shi and H. Nam, “Channel-Aware Clustering for Robust Wireless Federated Learning under Non-IID Data”, IEEE Op. J. Comm. Soc. (Minor Revision).
                   <details style="margin-top:8px;">
                     <summary class="pub-link" style="cursor:pointer;display:inline-flex;">View Summary</summary>
-                    <p style="margin:8px 0;font-size:12px;">This paper proposes FedClstr, a clustered federated learning approach designed to operate effectively under imperfect communication channels. The method enhances model accuracy and convergence by grouping clients based on data similarity while mitigating the impact of communication errors.</p>
+                    <p style="margin:8px 0;font-size:12px;">This deep learning learning framework that improves model accuracy in wireless networks by grouping clients based on their channel-state features. This approach overcomes challenges like unreliable connections and non-uniform data, boosting validation accuracy by 22% over standard methods.</p>
                     <div style="text-align:right;margin-top:8px;">
                       <a href="#" class="pub-link" target="_blank">Under Minor Revision</a>
                     </div>
@@ -916,7 +1029,7 @@
                     <summary class="pub-link" style="cursor:pointer;display:inline-flex;">View Summary</summary>
                     <p style="margin:8px 0;font-size:12px;">This paper explores the use of Wireless Body Area Networks (WBAN) for detecting infectious diseases, focusing on spatial correlation analysis under imperfect wireless channel conditions. The study highlights the challenges and solutions for reliable health monitoring in such environments.</p>
                     <div style="text-align:right;margin-top:8px;">
-                      <a href="https://www.liebertpub.com/doi/10.1089/big.2021.0123" class="pub-link" target="_blank">View Article →</a>
+                      <a href="https://pubmed.ncbi.nlm.nih.gov/34788074/" class="pub-link" target="_blank">View Article →</a>
                     </div>
                   </details>
                 </li>
@@ -924,12 +1037,12 @@
 
               <h4>2021</h4>
               <ul class="clean-list muted">
-                <li>Y. Rehman et al., “Detection of Small Size Traffic Signs … in YOLOv3”, Applied Sciences, 2021.
+                <li>Y. Rehman et al., “Detection of Small Size Traffic Signs Using Regressive Anchor Box Selection and DBL Layer Tweaking in YOLOv3”, Applied Sciences, 2021.
                   <details style="margin-top:8px;">
                     <summary class="pub-link" style="cursor:pointer;display:inline-flex;">View Summary</summary>
                     <p style="margin:8px 0;font-size:12px;">This study enhances the YOLOv3 object detection framework to improve the detection of small-sized traffic signs. By implementing architectural modifications and training strategies, the approach achieves higher accuracy and reliability in real-world traffic scenarios.</p>
                     <div style="text-align:right;margin-top:8px;">
-                      <a href="https://www.mdpi.com/2076-3417/11/4/1723" class="pub-link" target="_blank">View Article →</a>
+                      <a href="https://www.mdpi.com/2076-3417/11/23/11555" class="pub-link" target="_blank">View Article →</a>
                     </div>
                   </details>
                 </li>
@@ -938,7 +1051,7 @@
                     <summary class="pub-link" style="cursor:pointer;display:inline-flex;">View Summary</summary>
                     <p style="margin:8px 0;font-size:12px;">This paper presents a machine learning-based approach for cluster formation in vehicular communication networks. The proposed method enhances network efficiency and reliability by optimizing cluster structures based on vehicle mobility patterns and communication requirements.</p>
                     <div style="text-align:right;margin-top:8px;">
-                      <a href="https://link.springer.com/article/10.1007/s11235-020-00730-4" class="pub-link" target="_blank">View Article →</a>
+                      <a href="https://link.springer.com/article/10.1007/s11235-021-00798-7" class="pub-link" target="_blank">View Article →</a>
                     </div>
                   </details>
                 </li>
@@ -948,12 +1061,12 @@
             <div class="pub-col">
               <h4>2020</h4>
               <ul class="clean-list muted">
-                <li>D.M.S. Bhatti et al., “Clustering Formation in Cognitive Radio Networks Using Machine Learning”, AEU, 2020.
+                <li>D.M.S. Bhatti et al., “Clustering Formation in Cognitive Radio Networks Using Machine Learning”, AEU - International Journal of Electronics and Communications, 2020.
                   <details style="margin-top:8px;">
                     <summary class="pub-link" style="cursor:pointer;display:inline-flex;">View Summary</summary>
                     <p style="margin:8px 0;font-size:12px;">This study introduces a machine learning-based clustering formation technique for cognitive radio networks. The approach enhances spectrum utilization and network performance by dynamically grouping users based on their communication patterns and channel conditions.</p>
                     <div style="text-align:right;margin-top:8px;">
-                      <a href="https://www.sciencedirect.com/science/article/abs/pii/S1434841119304642" class="pub-link" target="_blank">View Article →</a>
+                      <a href="https://www.sciencedirect.com/science/article/abs/pii/S1434841119313809" class="pub-link" target="_blank">View Article →</a>
                     </div>
                   </details>
                 </li>
@@ -966,7 +1079,7 @@
                     <summary class="pub-link" style="cursor:pointer;display:inline-flex;">View Summary</summary>
                     <p style="margin:8px 0;font-size:12px;">This paper proposes a complexity-reduced soft MIMO detection algorithm utilizing a single tree search approach. The method aims to enhance detection performance while minimizing computational overhead, making it suitable for real-time wireless communication systems.</p>
                     <div style="text-align:right;margin-top:8px;">
-                      <a href="http://www.ijsaem.org/volume7-issue3.html" class="pub-link" target="_blank">View Article →</a>
+                      <a href="https://link.springer.com/article/10.1007/s13198-019-00836-3" class="pub-link" target="_blank">View Article →</a>
                     </div>
                   </details>
                 </li>
@@ -975,7 +1088,7 @@
                     <summary class="pub-link" style="cursor:pointer;display:inline-flex;">View Summary</summary>
                     <p style="margin:8px 0;font-size:12px;">This study presents an efficient method for Soft Bit Information (SBI) estimation in iterative coded MIMO systems. The proposed technique improves decoding accuracy and reduces computational complexity, enhancing overall system performance.</p>
                     <div style="text-align:right;margin-top:8px;">
-                      <a href="http://paper.ijcsns.org/07_book/201903/20190319.pdf" class="pub-link" target="_blank">View Article →</a>
+                      <a href="http://paper.ijcsns.org/07_book/201906/20190618.pdf" class="pub-link" target="_blank">View Article →</a>
                     </div>
                   </details>
                 </li>
@@ -989,7 +1102,7 @@
                     <summary class="pub-link" style="cursor:pointer;display:inline-flex;">View Summary</summary>
                     <p style="margin:8px 0;font-size:12px;">This paper presents a Virtual General Physician System that leverages artificial intelligence to provide preliminary medical diagnoses and health advice. The system utilizes machine learning algorithms to analyze patient symptoms and medical history, aiming to enhance accessibility to healthcare services.</p>
                     <div style="text-align:right;margin-top:8px;">
-                      <a href="https://brain.edusoft.ro/index.php/brain/article/view/2018.1.2" class="pub-link" target="_blank">View Article →</a>
+                      <a href="https://www.edusoft.ro/brain/index.php/brain/article/view/872" class="pub-link" target="_blank">View Article →</a>
                     </div>
                   </details>
                 </li>
@@ -999,7 +1112,7 @@
                     <summary class="pub-link" style="cursor:pointer;display:inline-flex;">View Summary</summary>
                     <p style="margin:8px 0;font-size:12px;">This study explores the use of sensors for surface detection in automobiles, aiming to enhance vehicle safety and performance. The proposed system utilizes various sensor technologies to monitor road conditions and vehicle dynamics, providing real-time feedback for improved driving experiences.</p>
                     <div style="text-align:right;margin-top:8px;">
-                      <a href="http://paper.ijcsns.org/07_book/201804/20180410.pdf" class="pub-link" target="_blank">View Article →</a>
+                      <a href="http://paper.ijcsns.org/07_book/201809/20180918.pdf" class="pub-link" target="_blank">View Article →</a>
                     </div>
                   </details>
                 </li>
@@ -1009,7 +1122,7 @@
                     <summary class="pub-link" style="cursor:pointer;display:inline-flex;">View Summary</summary>
                     <p style="margin:8px 0;font-size:12px;">This paper investigates the application of combinatorial auctions for energy storage sharing among households. The proposed auction mechanism aims to optimize the allocation of energy storage resources, promoting efficient energy usage and cost savings for participating households.</p>
                     <div style="text-align:right;margin-top:8px;">
-                      <a href="https://www.sciencedirect.com/science/article/abs/pii/S2352152X18301701" class="pub-link" target="_blank">View Article →</a>
+                      <a href="https://www.sciencedirect.com/science/article/abs/pii/S2352152X18302007" class="pub-link" target="_blank">View Article →</a>
                     </div>
                   </details>
                 </li>
@@ -1019,7 +1132,7 @@
                     <summary class="pub-link" style="cursor:pointer;display:inline-flex;">View Summary</summary>
                     <p style="margin:8px 0;font-size:12px;">This survey paper provides a comprehensive overview of Multidimensional Scaling (MDS) techniques, exploring their applications, methodologies, and challenges. The study highlights the significance of MDS in various fields, including data visualization, machine learning, and network analysis.</p>
                     <div style="text-align:right;margin-top:8px;">
-                      <a href="https://dl.acm.org/doi/10.1145/3158663" class="pub-link" target="_blank">View Article →</a>
+                      <a href="https://dl.acm.org/doi/10.1145/3178155" class="pub-link" target="_blank">View Article →</a>
                     </div>
                   </details>
                 </li>
@@ -1029,7 +1142,7 @@
                     <summary class="pub-link" style="cursor:pointer;display:inline-flex;">View Summary</summary>
                     <p style="margin:8px 0;font-size:12px;">This paper reviews privacy-preserving authentication approaches in Vehicular Ad Hoc Networks (VANETs), discussing existing challenges and proposing future research directions. The study emphasizes the importance of secure communication protocols to protect user privacy in vehicular networks.</p>
                     <div style="text-align:right;margin-top:8px;">
-                      <a href="http://paper.ijcsns.org/07_book/201803/20180314.pdf" class="pub-link" target="_blank">View Article →</a>
+                      <a href="http://paper.ijcsns.org/07_book/201804/20180408.pdf" class="pub-link" target="_blank">View Article →</a>
                     </div>
                   </details>
                 </li>
@@ -1039,7 +1152,7 @@
                     <summary class="pub-link" style="cursor:pointer;display:inline-flex;">View Summary</summary>
                     <p style="margin:8px 0;font-size:12px;">This study examines various MIMO detection schemes for emerging wireless communication systems. The paper evaluates the performance of different algorithms, highlighting their strengths and weaknesses in terms of complexity, accuracy, and suitability for future wireless technologies.</p>
                     <div style="text-align:right;margin-top:8px;">
-                      <a href="http://paper.ijcsns.org/07_book/201802/20180211.pdf" class="pub-link" target="_blank">View Article →</a>
+                      <a href="http://paper.ijcsns.org/07_book/201803/20180319.pdf" class="pub-link" target="_blank">View Article →</a>
                     </div>
                   </details>
                 </li>
@@ -1049,7 +1162,7 @@
                     <summary class="pub-link" style="cursor:pointer;display:inline-flex;">View Summary</summary>
                     <p style="margin:8px 0;font-size:12px;">This paper proposes an efficient error detection method for soft data fusion in cooperative spectrum sensing. The approach enhances the reliability of spectrum sensing by identifying and mitigating errors in the fusion process, leading to improved detection performance in cognitive radio networks.</p>
                     <div style="text-align:right;margin-top:8px;">
-                      <a href="https://www.sciencedirect.com/science/article/abs/pii/S1434841118301232" class="pub-link" target="_blank">View Article →</a>
+                      <a href="https://www.sciencedirect.com/science/article/abs/pii/S1434841117319672" class="pub-link" target="_blank">View Article →</a>
                     </div>
                   </details>
                 </li>
@@ -1064,7 +1177,7 @@
                     <summary class="pub-link" style="cursor:pointer;display:inline-flex;">View Summary</summary>
                     <p style="margin:8px 0;font-size:12px;">This paper presents a spatial correlation-based analysis of soft combination techniques and user selection algorithms for cooperative spectrum sensing. The study aims to enhance detection performance by leveraging spatial correlation among users in cognitive radio networks.</p>
                     <div style="text-align:right;margin-top:8px;">
-                      <a href="https://digital-library.theiet.org/content/journals/10.1049/iet-com.2017.0154" class="pub-link" target="_blank">View Article →</a>
+                      <a href="https://digital-library.theiet.org/doi/10.1049/iet-com.2016.0373" class="pub-link" target="_blank">View Article →</a>
                     </div>
                   </details>
                 </li>
@@ -1075,7 +1188,7 @@
                     <summary class="pub-link" style="cursor:pointer;display:inline-flex;">View Summary</summary>
                     <p style="margin:8px 0;font-size:12px;">This study introduces a low-complexity Successive Interference Cancellation Minimum Mean Square Error (SIC-MMSE) algorithm for joint MIMO detection. The proposed method aims to improve detection accuracy while reducing computational complexity, making it suitable for real-time wireless communication systems.</p>
                     <div style="text-align:right;margin-top:8px;">
-                      <a href="https://link.springer.com/article/10.1134/S1064226917030102" class="pub-link" target="_blank">View Article →</a>
+                      <a href="https://link.springer.com/article/10.1134/S1064226917110146#auth-1" class="pub-link" target="_blank">View Article →</a>
                     </div>
                   </details>
                 </li>
@@ -1085,7 +1198,7 @@
                     <summary class="pub-link" style="cursor:pointer;display:inline-flex;">View Summary</summary>
                     <p style="margin:8px 0;font-size:12px;">This paper proposes a fuzzy C-means clustering approach combined with an energy-efficient cluster head selection algorithm for cooperative sensor networks. The method aims to enhance network longevity and data transmission efficiency by optimizing cluster formation and head selection processes.</p>
                     <div style="text-align:right;margin-top:8px;">
-                      <a href="https://www.mdpi.com/1424-8220/17/1/150" class="pub-link" target="_blank">View Article →</a>
+                      <a href="https://www.mdpi.com/1424-8220/16/9/1459" class="pub-link" target="_blank">View Article →</a>
                     </div>
                   </details>
                 </li>
@@ -1098,7 +1211,7 @@
                     <summary class="pub-link" style="cursor:pointer;display:inline-flex;">View Summary</summary>
                     <p style="margin:8px 0;font-size:12px;">This paper presents an efficient localization algorithm for wireless sensor networks that utilizes Levenberg-Marquardt refinement. The proposed method aims to improve localization accuracy while minimizing computational overhead, making it suitable for resource-constrained sensor networks.</p>
                     <div style="text-align:right;margin-top:8px;">
-                      <a href="https://www.riverpublishers.com/journal_read_html_article.php?j=ASWN/ASWN_Volume_8_Issue_3/ASWN_Volume_8_Issue_3_Article_4" class="pub-link" target="_blank">View Article →</a>
+                      <a href="https://www.oldcitypublishing.com/journals/ahswn-home/ahswn-issue-contents/ahswn-volume-34-number-1-4-2016/ahswn-34-1-p-245-256/" class="pub-link" target="_blank">View Article →</a>
                     </div>
                   </details>
                 </li>
