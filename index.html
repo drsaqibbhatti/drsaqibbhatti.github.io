@@ -95,13 +95,31 @@
     }[m]));
   }
 
+  function labelFromUrl(url){
+    try{
+      const u = new URL(url);
+      // Prefer #hash (e.g. #skills), then last path segment (e.g. /pcb-anomaly.html)
+      if (u.hash && u.hash.length > 1) return u.hash.slice(1);
+      const parts = u.pathname.split("/").filter(Boolean);
+      let last = parts.length ? parts[parts.length - 1] : u.hostname;
+      last = last.replace(".html","").replace(/[-_]+/g," ");
+      // Title-case
+      return last.replace(/\b\w/g, c => c.toUpperCase());
+    } catch {
+      return "Link";
+    }
+  }
+
   function linkify(text){
     const safe = escapeHtml(text);
-    return safe.replace(
-      /(https?:\/\/[^\s)]+)\b/g,
-      '<a class="chat-link" href="$1" target="_blank" rel="noreferrer">$1</a>'
-    ).replace(/\n/g, "<br>");
+    return safe
+      .replace(/(https?:\/\/[^\s)]+)\b/g, (match) => {
+        const label = labelFromUrl(match);
+        return `<a class="chat-link" href="${match}" target="_blank" rel="noreferrer">${label}</a>`;
+      })
+      .replace(/\n/g, "<br>");
   }
+
 
   function addMsg(text, who){
     const d = document.createElement("div");
