@@ -58,6 +58,33 @@
     width:28px; height:28px; border-radius:50%;
     object-fit:cover; flex-shrink:0;
   }
+  .user-avatar-icon{
+    width:28px; height:28px; border-radius:50%;
+    background:linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+    animation:userPulse 2s ease-in-out infinite;
+  }
+  .user-avatar-icon::before{
+    content:"";
+    width:10px; height:10px;
+    border-radius:50%;
+    background:white;
+    position:relative;
+    top:-2px;
+  }
+  .user-avatar-icon::after{
+    content:"";
+    width:16px; height:12px;
+    border-radius:50% 50% 0 0;
+    background:white;
+    position:absolute;
+    bottom:2px;
+  }
+  @keyframes userPulse{
+    0%, 100%{ transform:scale(1); }
+    50%{ transform:scale(1.05); }
+  }
   .msg-content{
     padding:10px 12px; border-radius:14px; line-height:1.35; flex:1;
   }
@@ -153,10 +180,16 @@
     const d = document.createElement("div");
     d.className = "msg " + who;
     
-    const avatar = document.createElement("img");
-    avatar.className = "msg-avatar";
-    avatar.src = who === "bot" ? "face.png" : "";
-    avatar.alt = who === "bot" ? "Saqib" : "You";
+    let avatar;
+    if (who === "bot") {
+      avatar = document.createElement("img");
+      avatar.className = "msg-avatar";
+      avatar.src = "face.png";
+      avatar.alt = "Saqib";
+    } else {
+      avatar = document.createElement("div");
+      avatar.className = "user-avatar-icon";
+    }
     
     const content = document.createElement("div");
     content.className = "msg-content";
