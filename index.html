@@ -89,10 +89,24 @@
   const input = document.getElementById("chatInput");
   const sendBtn = document.getElementById("chatSend");
 
+  function escapeHtml(s){
+    return s.replace(/[&<>"']/g, m => ({
+      "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"
+    }[m]));
+  }
+
+  function linkify(text){
+    const safe = escapeHtml(text);
+    return safe.replace(
+      /(https?:\/\/[^\s)]+)\b/g,
+      '<a class="chat-link" href="$1" target="_blank" rel="noreferrer">$1</a>'
+    ).replace(/\n/g, "<br>");
+  }
+
   function addMsg(text, who){
     const d = document.createElement("div");
     d.className = "msg " + who;
-    d.textContent = text;
+    d.innerHTML = linkify(text);
     log.appendChild(d);
     log.scrollTop = log.scrollHeight;
   }
