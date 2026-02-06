@@ -230,6 +230,8 @@
           log.scrollTop = log.scrollHeight;
           setTimeout(type, speed);
         } else {
+          // After typing completes, convert URLs to links
+          content.innerHTML = linkify(content.textContent);
           resolve();
         }
       }
