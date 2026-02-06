@@ -289,10 +289,10 @@
       });
       const data = await r.json();
       removeTypingIndicator();
-      addMsg(data.reply || (data.error ? ("Error: " + data.error) : "No reply returned."), "bot");
+      await typeMessage(data.reply || (data.error ? ("Error: " + data.error) : "No reply returned."), "bot");
     }catch(e){
       removeTypingIndicator();
-      addMsg("Network error. Please try again.", "bot");
+      await typeMessage("Network error. Please try again.", "bot");
     }
   }
 
