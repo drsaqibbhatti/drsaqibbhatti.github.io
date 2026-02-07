@@ -322,18 +322,21 @@
 
   <header class="nav">
     <div class="container nav-inner">
-      <a class="logo" href="#top">Deep Learning & Computer Vision Engineer<span>.</span></a>
+      <a class="logo" href="#top" data-i18n="Deep Learning & Computer Vision Engineer">Deep Learning & Computer Vision Engineer<span>.</span></a>
 
       <nav class="links">
-        <a href="#experience" class="nav-btn-transparent">Experience</a>
-        <a href="#projects" class="nav-btn-transparent">Industrial Projects</a>
-        <a href="#skills" class="nav-btn-transparent">Skills</a>
-        <a href="#publications" class="nav-btn-transparent">Publications</a>
-        <a href="#service" class="nav-btn-transparent">Recognition</a>
-        <a href="#contact" class="btn">Contact</a>
+        <a href="#experience" class="nav-btn-transparent" data-i18n="Experience">Experience</a>
+        <a href="#projects" class="nav-btn-transparent" data-i18n="Industrial Projects">Industrial Projects</a>
+        <a href="#skills" class="nav-btn-transparent" data-i18n="Skills">Skills</a>
+        <a href="#publications" class="nav-btn-transparent" data-i18n="Publications">Publications</a>
+        <a href="#service" class="nav-btn-transparent" data-i18n="Recognition">Recognition</a>
+        <a href="#contact" class="btn" data-i18n="Contact">Contact</a>
         <div class="theme-toggle">
           <button class="theme-btn" id="lightBtn" onclick="setTheme('light')">☀️ Light</button>
           <button class="theme-btn" id="darkBtn" onclick="setTheme('dark')">🌙 Dark</button>
+        </div>
+        <div class="lang-toggle" style="margin-left:12px;">
+          <button class="theme-btn" id="langBtn" onclick="toggleLanguage()" style="min-width:80px;">🇰🇷 한국어</button>
         </div>
       </nav>
     </div>
@@ -344,31 +347,31 @@
     <!-- HERO -->
     <section class="hero">
       <div class="card hero-card">
-        <p class="badge">Deep Learning Engineer (Computer Vision)</p>
+        <p class="badge" data-i18n="Deep Learning Engineer (Computer Vision)">Deep Learning Engineer (Computer Vision)</p>
 
         <h1><span class="grad">Dr. DM. Saqib Bhatti</span>.</h1>
 
-        <p class="subtitle">Deep Learning Engineer | Computer Vision | 15+ Years Experience</p>
+        <p class="subtitle" data-i18n="Deep Learning Engineer | Computer Vision | 15+ Years Experience">Deep Learning Engineer | Computer Vision | 15+ Years Experience</p>
 
-        <p class="sub">
+        <p class="sub" data-i18n="hero-description">
           A Deep Learning & Computer Vision expert with 15+ years of experience specializing in Automated Optical Inspection (AOI),
           Defect Detection, Industrial AI, and Infrastructure Monitoring Systems — focused on real-time, high-accuracy models using
           customized object detection, segmentation, classification, anomaly detection, and pose estimation.
         </p>
 
         <div class="cta">
-          <a class="ghost" href="#projects">View Industrial Projects</a>
-          <a class="ghost" href="#experience">Experience</a>
-          <a class="ghost" href="#publications">Publications</a>
+          <a class="ghost" href="#projects" data-i18n="View Industrial Projects">View Industrial Projects</a>
+          <a class="ghost" href="#experience" data-i18n="Experience">Experience</a>
+          <a class="ghost" href="#publications" data-i18n="Publications">Publications</a>
 
           <a class="ghost" href="https://github.com/drsaqibbhatti" target="_blank" rel="noreferrer">GitHub</a>
           <a class="ghost" href="https://www.linkedin.com/in/dr-saqib-bhatti-sr-member-ieee-21433b18/" target="_blank" rel="noreferrer">LinkedIn</a>
 
-          <a class="ghost" href="resume.pdf" target="_blank" rel="noreferrer">Download Resume</a>
+          <a class="ghost" href="resume.pdf" target="_blank" rel="noreferrer" data-i18n="Download Resume">Download Resume</a>
         </div>
 
         <div class="card" style="padding:18px;margin-top:20px;">
-          <h4 style="margin:0 0 12px;font-size:16px;">Core Expertise</h4>
+          <h4 style="margin:0 0 12px;font-size:16px;" data-i18n="Core Expertise">Core Expertise</h4>
           <div style="display:flex;flex-wrap:wrap;gap:16px;line-height:1.8;">
             <span>🤖 Deep Learning</span>
             <span>👁️ Computer Vision</span>
@@ -383,19 +386,19 @@
 
         <div class="hero-meta">
           <div class="meta-card">
-            <p class="meta-k">Current</p>
-            <p class="meta-v">Computer Vision Engineer (Deep Learning)</p>
-            <p class="meta-s">Hyvision Systems · South Korea</p>
+            <p class="meta-k" data-i18n="Current">Current</p>
+            <p class="meta-v" data-i18n="Computer Vision Engineer (Deep Learning)">Computer Vision Engineer (Deep Learning)</p>
+            <p class="meta-s" data-i18n="Hyvision Systems · South Korea">Hyvision Systems · South Korea</p>
           </div>
           <div class="meta-card">
-            <p class="meta-k">Education</p>
-            <p class="meta-v">MS–PhD, Hanyang University</p>
-            <p class="meta-s">Seoul, South Korea (2012–2017)</p>
+            <p class="meta-k" data-i18n="Education">Education</p>
+            <p class="meta-v" data-i18n="MS–PhD, Hanyang University">MS–PhD, Hanyang University</p>
+            <p class="meta-s" data-i18n="Seoul, South Korea (2012–2017)">Seoul, South Korea (2012–2017)</p>
           </div>
           <div class="meta-card">
-            <p class="meta-k">Focus</p>
-            <p class="meta-v">AOI + Real-time Inspection</p>
-            <p class="meta-s">Defects, anomaly detection, monitoring</p>
+            <p class="meta-k" data-i18n="Focus">Focus</p>
+            <p class="meta-v" data-i18n="AOI + Real-time Inspection">AOI + Real-time Inspection</p>
+            <p class="meta-s" data-i18n="Defects, anomaly detection, monitoring">Defects, anomaly detection, monitoring</p>
           </div>
         </div>
       </div>
@@ -404,8 +407,8 @@
     <!-- EXPERIENCE -->
     <section id="experience" class="section">
       <div class="section-head">
-        <h2>Experience</h2>
-        <p>Industry + research roles across Computer Vision, Industrial AI, and inspection systems.</p>
+        <h2 data-i18n="Experience">Experience</h2>
+        <p data-i18n="exp-description">Industry + research roles across Computer Vision, Industrial AI, and inspection systems.</p>
       </div>
 
       <div class="timeline">
@@ -959,14 +962,14 @@
     <!-- SKILLS -->
     <section id="skills" class="section">
       <div class="section-head">
-        <h2>Skills</h2>
-        <p>Tooling and frameworks used across industrial CV and deep learning systems.</p>
+        <h2 data-i18n="Skills">Skills</h2>
+        <p data-i18n="skills-description">Tooling and frameworks used across industrial CV and deep learning systems.</p>
       </div>
 
       <div class="grid3">
         <article class="card">
-          <h3>Programming</h3>
-          <p class="muted"><strong>Languages:</strong></p>
+          <h3 data-i18n="Programming">Programming</h3>
+          <p class="muted"><strong data-i18n="Languages:">Languages:</strong></p>
           <div style="display:flex;gap:16px;align-items:center;margin-top:10px;flex-wrap:wrap;">
             <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-python-plain colored" style="font-size:28px;"></i> Python</span>
             <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-matlab-plain colored" style="font-size:28px;"></i> MATLAB</span>
@@ -977,7 +980,7 @@
         </article>
 
         <article class="card">
-          <h3>Libraries</h3>
+          <h3 data-i18n="Libraries">Libraries</h3>
           <div style="display:flex;gap:16px;align-items:center;margin-top:10px;flex-wrap:wrap;">
             <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-keras-plain colored" style="font-size:28px;"></i> Keras</span>
             <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-opencv-plain colored" style="font-size:28px;"></i> OpenCV</span>
@@ -987,7 +990,7 @@
         </article>
 
         <article class="card">
-          <h3>Frameworks / Models</h3>
+          <h3 data-i18n="Frameworks / Models">Frameworks / Models</h3>
           <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px;">
             <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
               <span style="font-size:20px;">🎯</span>
@@ -1009,7 +1012,7 @@
         </article>
 
         <article class="card">
-          <h3>Hardware</h3>
+          <h3 data-i18n="Hardware">Hardware</h3>
           <div style="display:flex;gap:16px;align-items:center;margin-top:10px;flex-wrap:wrap;">
             <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-nvidia-original colored" style="font-size:28px;"></i> NVIDIA GPU</span>
             <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-raspberrypi-plain colored" style="font-size:28px;"></i> Raspberry Pi</span>
@@ -1018,7 +1021,7 @@
         </article>
 
         <article class="card">
-          <h3>Software</h3>
+          <h3 data-i18n="Software">Software</h3>
           <div style="display:flex;gap:16px;align-items:center;margin-top:10px;flex-wrap:wrap;">
             <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-vscode-plain colored" style="font-size:28px;"></i> VS Code</span>
             <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-docker-plain colored" style="font-size:28px;"></i> Docker</span>
@@ -1030,7 +1033,7 @@
         </article>
 
         <article class="card">
-          <h3>Specialties</h3>
+          <h3 data-i18n="Specialties">Specialties</h3>
           <div style="display:flex;gap:12px;align-items:center;margin-top:10px;flex-wrap:wrap;">
             <span style="display:flex;align-items:center;gap:6px;"><span style="font-size:20px;">👁️</span> AOI</span>
             <span style="display:flex;align-items:center;gap:6px;"><span style="font-size:20px;">🎯</span> Defect Detection</span>
@@ -1046,13 +1049,13 @@
     <!-- PUBLICATIONS -->
     <section id="publications" class="section">
       <div class="section-head">
-        <h2>Publications</h2>
-        <p>Peer-reviewed journals, conferences, and book chapters (grouped).</p>
+        <h2 data-i18n="Publications">Publications</h2>
+        <p data-i18n="pub-description">Peer-reviewed journals, conferences, and book chapters (grouped).</p>
       </div>
 
       <div class="grid2">
         <article class="card">
-          <h3>Recent Journal Highlights</h3>
+          <h3 data-i18n="Recent Journal Highlights">Recent Journal Highlights</h3>
           <ul class="clean-list muted">
             <li>2025 — Energies: Explainable clustered federated learning for solar energy forecasting</li>
             <li>2025 — Sensors: Shapley-based adaptive weighting for collaborative learning</li>
@@ -1060,11 +1063,11 @@
             <li>2023 — IEEE TNSM: FedCLS aggregation method</li>
             <li>2021 — Applied Sciences: Small traffic sign detection (YOLOv3 improvements)</li>
           </ul>
-          <p class="muted" style="margin-top:10px;">Full lists below.</p>
+          <p class="muted" style="margin-top:10px;" data-i18n="Full lists below.">Full lists below.</p>
         </article>
 
         <article class="card">
-          <h3>Conference & Book</h3>
+          <h3 data-i18n="Conference & Book">Conference & Book</h3>
           <ul class="clean-list muted">
             <li>ICUFN 2023 — Robust aggregation for heterogeneous federated learning</li>
             <li>ICAIIC 2023 — Performance efficient global training in federated learning</li>
@@ -1078,8 +1081,8 @@
 
         <details class="acc card">
           <summary>
-            <span class="acc-title">Journal Publications</span>
-            <span class="acc-tag">View Full List</span>
+            <span class="acc-title" data-i18n="Journal Publications">Journal Publications</span>
+            <span class="acc-tag" data-i18n="View Full List">View Full List</span>
           </summary>
 
           <div class="pub-grid">
@@ -1414,8 +1417,8 @@
 
         <details class="acc card">
           <summary>
-            <span class="acc-title">Conference Proceedings</span>
-            <span class="acc-tag">View Full List</span>
+            <span class="acc-title" data-i18n="Conference Proceedings">Conference Proceedings</span>
+            <span class="acc-tag" data-i18n="View Full List">View Full List</span>
           </summary>
 
           <h4>2023</h4>
@@ -1442,8 +1445,8 @@
 
         <details class="acc card">
           <summary>
-            <span class="acc-title">Book Chapter</span>
-            <span class="acc-tag">View Full List</span>
+            <span class="acc-title" data-i18n="Book Chapter">Book Chapter</span>
+            <span class="acc-tag" data-i18n="View Full List">View Full List</span>
           </summary>
           <ul class="clean-list muted">
             <li>M. Khan, S. Ahmed, P. Kumar and D.M.S. Bhatti, “Impact of Artificial Intelligence in Cardiovascular Disease,” Scrivener Publishing, 2021.</li>
@@ -1456,33 +1459,33 @@
     <!-- SERVICE / MEMBERSHIPS / REVIEWING / ACADEMIC PROJECTS / AWARDS -->
     <section id="service" class="section">
       <div class="section-head">
-        <h2>Recognition</h2>
-        <p>Professional memberships, reviewing activity, funded academic projects, and awards.</p>
+        <h2 data-i18n="Recognition">Recognition</h2>
+        <p data-i18n="recognition-description">Professional memberships, reviewing activity, funded academic projects, and awards.</p>
       </div>
 
       <div class="grid2">
         <article class="card">
-          <h3>Professional Memberships</h3>
+          <h3 data-i18n="Professional Memberships">Professional Memberships</h3>
           <ul class="clean-list muted">
-            <li>Senior Member — IEEE</li>
-            <li>Professional Engineer — Pakistan Engineering Council (PEC)</li>
-            <li>Global Member — KICS (Korean Institute of Communications and Information Sciences)</li>
+            <li data-i18n="Senior Member — IEEE">Senior Member — IEEE</li>
+            <li data-i18n="Professional Engineer — Pakistan Engineering Council (PEC)">Professional Engineer — Pakistan Engineering Council (PEC)</li>
+            <li data-i18n="Global Member — KICS (Korean Institute of Communications and Information Sciences)">Global Member — KICS (Korean Institute of Communications and Information Sciences)</li>
           </ul>
         </article>
 
         <article class="card">
-          <h3>Awards & Honors</h3>
+          <h3 data-i18n="Awards & Honors">Awards & Honors</h3>
           <ul class="clean-list muted">
-            <li>Award for organizing MTSET-2017 (Pakistan).</li>
-            <li>HEC (GoP) Scholarship for MS–PhD study in South Korea.</li>
+            <li data-i18n="Award for organizing MTSET-2017 (Pakistan).">Award for organizing MTSET-2017 (Pakistan).</li>
+            <li data-i18n="HEC (GoP) Scholarship for MS–PhD study in South Korea.">HEC (GoP) Scholarship for MS–PhD study in South Korea.</li>
           </ul>
         </article>
       </div>
 
       <details class="acc card">
         <summary>
-          <span class="acc-title">Reviewer of Journals</span>
-          <span class="acc-tag">View Full list</span>
+          <span class="acc-title" data-i18n="Reviewer of Journals">Reviewer of Journals</span>
+          <span class="acc-tag" data-i18n="View Full list">View Full list</span>
         </summary>
         <ul class="clean-list muted cols">
           <li>IEEE Transactions on Cybernetics</li>
@@ -1508,8 +1511,8 @@
 
       <details class="acc card">
         <summary>
-          <span class="acc-title">Academic Projects</span>
-          <span class="acc-tag">View Full list</span>
+          <span class="acc-title" data-i18n="Academic Projects">Academic Projects</span>
+          <span class="acc-tag" data-i18n="View Full list">View Full list</span>
         </summary>
         <ul class="clean-list muted">
           <li>Deep Learning based Integrated MEC-HCRAN Model for 6G — funded by NRF (Brain Pool), South Korea.</li>
@@ -1612,6 +1615,144 @@
         details.addEventListener('toggle', () => {
           tag.textContent = details.open ? hideText : originalText;
         });
+      }
+    });
+
+    // Language Translation System
+    let currentLang = localStorage.getItem('language') || 'en';
+
+    const translations = {
+      ko: {
+        // Header
+        'Deep Learning & Computer Vision Engineer': '딥러닝 및 컴퓨터 비전 엔지니어',
+        'Experience': '경력',
+        'Industrial Projects': '산업 프로젝트',
+        'Skills': '기술',
+        'Publications': '논문',
+        'Recognition': '수상 및 활동',
+        'Contact': '연락처',
+        
+        // Hero Section
+        'Deep Learning Engineer (Computer Vision)': '딥러닝 엔지니어 (컴퓨터 비전)',
+        'Deep Learning Engineer | Computer Vision | 15+ Years Experience': '딥러닝 엔지니어 | 컴퓨터 비전 | 15년 이상 경력',
+        'hero-description': 'AOI(자동 광학 검사), 결함 감지, 산업 AI 및 인프라 모니터링 시스템을 전문으로 하는 15년 이상의 경력을 가진 딥러닝 및 컴퓨터 비전 전문가 — 맞춤형 객체 감지, 세그멘테이션, 분류, 이상 탐지 및 포즈 추정을 사용한 실시간 고정밀 모델에 중점',
+        'View Industrial Projects': '산업 프로젝트 보기',
+        'Download Resume': '이력서 다운로드',
+        'Core Expertise': '핵심 전문 분야',
+        'Current': '현재',
+        'Computer Vision Engineer (Deep Learning)': '컴퓨터 비전 엔지니어 (딥러닝)',
+        'Hyvision Systems · South Korea': 'Hyvision Systems · 대한민국',
+        'Education': '학력',
+        'MS–PhD, Hanyang University': '석박사통합, 한양대학교',
+        'Seoul, South Korea (2012–2017)': '서울, 대한민국 (2012–2017)',
+        'Focus': '중점 분야',
+        'AOI + Real-time Inspection': 'AOI + 실시간 검사',
+        'Defects, anomaly detection, monitoring': '결함, 이상 탐지, 모니터링',
+        
+        // Experience Section
+        'exp-description': '컴퓨터 비전, 산업 AI 및 검사 시스템 분야의 산업 + 연구 역할',
+        'Computer Vision Engineer': '컴퓨터 비전 엔지니어',
+        '(Deep Learning) Hyvision Systems': '(딥러닝) Hyvision Systems',
+        'Industrial AOI and defect detection pipelines for production.': '생산용 산업 AOI 및 결함 감지 파이프라인',
+        'Real-time optimization and deployment-ready model engineering.': '실시간 최적화 및 배포 준비 모델 엔지니어링',
+        'Computer Vision & AI Researcher': '컴퓨터 비전 및 AI 연구원',
+        'Soongsil University, Seoul, South Korea': '숭실대학교, 서울, 대한민국',
+        'Computer vision and AI research.': '컴퓨터 비전 및 AI 연구',
+        'Hanyang University, South Korea': '한양대학교, 대한민국',
+        'Research and development in AI/vision systems.': 'AI/비전 시스템 연구 개발',
+        'Head of Department': '학과장',
+        'Dawood University of Engineering & Technology, Pakistan': 'Dawood University of Engineering & Technology, 파키스탄',
+        'Academic leadership and departmental management.': '학과 리더십 및 부서 관리',
+        'Assistant Professor': '조교수',
+        'Teaching, supervision, and research.': '교육, 지도 및 연구',
+        'Research Assistant PhD': '박사과정 연구조교',
+        'MS–PhD track, research and publications.': '석박사 과정, 연구 및 논문',
+        'BSS Engineer': 'BSS 엔지니어',
+        'Huawei Technologies, Pakistan': 'Huawei Technologies, 파키스탄',
+        'BSS engineering experience.': 'BSS 엔지니어링 경험',
+        'Academic Qualifications:': '학력:',
+        'MS–PhD (South Korea): Hanyang University, Seoul (Sep 2012 – Feb 2017)': '석박사통합 (대한민국): 한양대학교, 서울 (2012년 9월 – 2017년 2월)',
+        'BE (Pakistan): Mehran University of Engineering & Technology (Jan 2007 – Dec 2010)': '학사 (파키스탄): Mehran University of Engineering & Technology (2007년 1월 – 2010년 12월)',
+        
+        // Skills Section
+        'skills-description': '산업용 CV 및 딥러닝 시스템에서 사용되는 도구 및 프레임워크',
+        'Programming': '프로그래밍',
+        'Languages:': '언어:',
+        'Libraries': '라이브러리',
+        'Frameworks / Models': '프레임워크 / 모델',
+        'Hardware': '하드웨어',
+        'Software': '소프트웨어',
+        'Specialties': '전문 분야',
+        
+        // Publications Section
+        'pub-description': '동료 심사 저널, 컨퍼런스 및 책 챕터 (그룹별)',
+        'Recent Journal Highlights': '최근 주요 저널',
+        'Full lists below.': '전체 목록은 아래 참조',
+        'Conference & Book': '컨퍼런스 및 도서',
+        'Journal Publications': '저널 논문',
+        'View Full List': '전체 목록 보기',
+        'Conference Proceedings': '컨퍼런스 논문',
+        'Book Chapter': '도서 챕터',
+        
+        // Recognition Section
+        'recognition-description': '전문 회원, 심사 활동, 연구 프로젝트 및 수상',
+        'Professional Memberships': '전문 회원',
+        'Senior Member — IEEE': 'Senior Member — IEEE',
+        'Professional Engineer — Pakistan Engineering Council (PEC)': 'Professional Engineer — Pakistan Engineering Council (PEC)',
+        'Global Member — KICS (Korean Institute of Communications and Information Sciences)': 'Global Member — KICS (한국통신학회)',
+        'Awards & Honors': '수상 및 영예',
+        'Award for organizing MTSET-2017 (Pakistan).': 'MTSET-2017 조직 공로상 (파키스탄)',
+        'HEC (GoP) Scholarship for MS–PhD study in South Korea.': 'HEC (GoP) 대한민국 석박사 장학금',
+        'Reviewer of Journals': '저널 심사위원',
+        'View Full list': '전체 목록 보기',
+        'Academic Projects': '학술 프로젝트',
+        
+        // Contact Section
+        "Let's connect.": '연락주세요',
+        'Email': '이메일',
+        'More contact': '추가 연락처'
+      }
+    };
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'en' ? 'ko' : 'en';
+      localStorage.setItem('language', currentLang);
+      updateLanguage();
+      updateLangButton();
+    }
+
+    function updateLanguage() {
+      const elements = document.querySelectorAll('[data-i18n]');
+      elements.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const originalText = el.getAttribute('data-original') || el.textContent.trim();
+        
+        if (!el.hasAttribute('data-original')) {
+          el.setAttribute('data-original', originalText);
+        }
+        
+        if (currentLang === 'ko' && translations.ko[key]) {
+          el.textContent = translations.ko[key];
+        } else {
+          el.textContent = originalText;
+        }
+      });
+    }
+
+    function updateLangButton() {
+      const btn = document.getElementById('langBtn');
+      if (currentLang === 'ko') {
+        btn.textContent = '🇺🇸 English';
+      } else {
+        btn.textContent = '🇰🇷 한국어';
+      }
+    }
+
+    // Initialize on page load
+    window.addEventListener('DOMContentLoaded', function() {
+      updateLangButton();
+      if (currentLang === 'ko') {
+        updateLanguage();
       }
     });
   </script>
