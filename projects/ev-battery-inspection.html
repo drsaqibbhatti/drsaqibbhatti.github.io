@@ -92,11 +92,8 @@
 
       <div class="card" style="padding:18px; margin-top:14px;">
         <h3 style="margin-top:0;">Results Gallery</h3>
-        <div style="display:flex;flex-direction:column;gap:16px;align-items:center;">
-          <img src="../assets/projects/ev-battery-inspection/image1.png" alt="EV battery inspection result 1" loading="lazy" style="width:85%;border-radius:8px;" />
-          <img src="../assets/projects/ev-battery-inspection/image2.png" alt="EV battery inspection result 2" loading="lazy" style="width:85%;border-radius:8px;" />
-          <img src="../assets/projects/ev-battery-inspection/image3.png" alt="EV battery inspection result 3" loading="lazy" style="width:85%;border-radius:8px;" />
-          <img src="../assets/projects/ev-battery-inspection/image4.png" alt="EV battery inspection result 4" loading="lazy" style="width:85%;border-radius:8px;" />
+        <div style="display:flex;justify-content:center;align-items:center;">
+          <img id="galleryImage" src="../assets/projects/ev-battery-inspection/image1.png" alt="EV battery inspection result" loading="lazy" style="width:85%;border-radius:8px;" />
         </div>
       </div>
 
@@ -132,6 +129,21 @@
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
+    
+    // Image slideshow
+    const images = [
+      "../assets/projects/ev-battery-inspection/image1.png",
+      "../assets/projects/ev-battery-inspection/image2.png",
+      "../assets/projects/ev-battery-inspection/image3.png",
+      "../assets/projects/ev-battery-inspection/image4.png"
+    ];
+    let currentIndex = 0;
+    const galleryImage = document.getElementById("galleryImage");
+    
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % images.length;
+      galleryImage.src = images[currentIndex];
+    }, 3000); // Change image every 3 seconds
   </script>
 </body>
 </html>
