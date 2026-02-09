@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>End-to-End Optical Recognition System for IC Chip Inspection — Dr. Saqib Bhatti</title>
+  <meta name="description" content="Comprehensive OCR system for IC chip inspection with character recognition and text box detection." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="bg"></div>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="../index.html">← Back<span>.</span></a>
+      <nav class="links">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#contact" class="btn">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <div class="section-head">
+        <h2>End-to-End Optical Recognition System for IC Chip Inspection</h2>
+        <p>OCR · Character recognition · Text Box detection · Quality control · Production-ready</p>
+      </div>
+
+      <div class="card" style="padding:18px;">
+        <h3 style="margin-top:0;">Overview</h3>
+        <p class="muted">
+          Comprehensive optical recognition system designed for automated IC chip inspection in production environments. 
+          The system combines optical character recognition (OCR) for chip marking verification with text box detection capabilities, 
+          ensuring both correct labeling and surface quality in high-speed manufacturing lines.
+        </p>
+
+        <div class="tags" style="margin-top:14px">
+          <span style="display:inline-flex;align-items:center;gap:6px;"><span style="font-size:16px;">🔤</span> OCR</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><span style="font-size:16px;">🔍</span> Character Recognition</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><span style="font-size:16px;">🎯</span> Text Box Detection</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><i class="devicon-python-plain colored" style="font-size:16px;"></i> Python</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><i class="devicon-pytorch-original colored" style="font-size:16px;"></i> PyTorch</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><i class="devicon-tensorflow-original colored" style="font-size:16px;"></i> TensorFlow</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><i class="devicon-opencv-plain colored" style="font-size:16px;"></i> OpenCV</span>
+        </div>
+      </div>
+
+      <div class="grid two" style="margin-top:14px;">
+        <div class="card" style="padding:18px;">
+          <h3 style="margin-top:0;">Problem</h3>
+          <ul class="bullets">
+            <li>Manual verification of IC chip markings time-consuming and error-prone.</li>
+            <li>Varying lighting conditions and chip surface reflections challenge recognition accuracy.</li>
+            <li>High-speed production lines require real-time processing.</li>
+            <li>Need for simultaneous character verification and text box detection.</li>
+          </ul>
+        </div>
+
+        <div class="card" style="padding:18px;">
+          <h3 style="margin-top:0;">Solution</h3>
+          <ul class="bullets">
+            <li>End-to-end deep learning pipeline for OCR and text box detection.</li>
+            <li>Hybrid approach: OCR for character recognition + ConvNextV2 backbone for text box detection.</li>
+            <li>Robust preprocessing to handle lighting variations and reflections.</li>
+            <li>Real-time inference optimized for production line speeds.</li>
+            <li>Integrated quality control with automated pass/fail decisions.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid two" style="margin-top:14px;">
+        <div class="card" style="padding:18px;">
+          <h3 style="margin-top:0;">My Role</h3>
+          <ul class="bullets">
+            <li>Designed complete end-to-end OCR pipeline from image acquisition to decision output.</li>
+            <li>Developed character recognition models with high accuracy under variable conditions.</li>
+            <li>Integrated text box detection module for comprehensive quality assessment.</li>
+            <li>Implemented preprocessing techniques for robust performance under challenging lighting.</li>
+            <li>Optimized inference speed for real-time production line deployment.</li>
+            <li>Validated system performance across thousands of chip samples.</li>
+          </ul>
+        </div>
+
+        <div class="card" style="padding:18px;">
+          <h3 style="margin-top:0;">Implementation</h3>
+          <p class="muted" style="display:flex;align-items:center;gap:8px;"><i class="devicon-python-plain colored" style="font-size:20px;"></i> <strong>Language:</strong> Python</p>
+          <p class="muted"><strong>Libraries:</strong></p>
+          <div style="display:flex;gap:12px;align-items:center;margin-top:8px;flex-wrap:wrap;">
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-pytorch-original colored" style="font-size:20px;"></i> PyTorch</span>
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-opencv-plain colored" style="font-size:20px;"></i> OpenCV</span>
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-tensorflow-original colored" style="font-size:20px;"></i> TensorFlow</span>
+            <span style="display:flex;align-items:center;gap:6px;">Tesseract OCR</span>
+          </div>
+          <p class="muted" style="margin-top:12px;"><strong>Key Features:</strong> Character recognition, text box detection, quality grading, real-time processing</p>
+        </div>
+      </div>
+
+      <div class="card" style="padding:18px; margin-top:14px;">
+        <h3 style="margin-top:0;">Technical Approach</h3>
+        <div class="grid two" style="margin-top:12px;">
+          <div>
+            <h4 style="font-size:14px;margin-top:0;">OCR Pipeline</h4>
+            <ul class="bullets" style="font-size:13px;">
+              <li>Image preprocessing: contrast enhancement, noise reduction, alignment correction</li>
+              <li>Text region localization using detection networks</li>
+              <li>Character segmentation and recognition using deep learning models</li>
+              <li>Post-processing with language models for error correction</li>
+              <li>Confidence scoring for automated verification</li>
+            </ul>
+          </div>
+          <!-- <div>
+            <h4 style="font-size:14px;margin-top:0;">Defect Detection</h4>
+            <ul class="bullets" style="font-size:13px;">
+              <li>Surface inspection using CNN-based defect classifiers</li>
+              <li>Multi-class detection: scratches, contamination, chips, cracks</li>
+              <li>Anomaly detection for unknown defect patterns</li>
+              <li>Severity grading based on defect size and location</li>
+              <li>Integration with OCR results for comprehensive quality assessment</li>
+            </ul>
+          </div> -->
+        </div>
+
+
+      <div class="card" style="padding:18px; margin-top:14px;">
+        <h3 style="margin-top:0;">Results Gallery</h3>
+        <p class="muted">Real-time gesture recognition system demonstration.</p>
+
+        <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:16px; margin-top:16px;">
+          <!-- Column 1: GestureVideo3 alone -->
+          <div style="display:flex; justify-content:center; align-items:start;">
+            <video autoplay loop muted playsinline style="width:91%; border-radius:8px;">
+              <source src="../assets/projects/ic-chip-ocr/video1.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <!-- Column 2: GestureVideo4 and Image1 -->
+          <div style="display:flex; flex-direction:column; gap:16px;">
+            <video autoplay loop muted playsinline style="width:60%; border-radius:8px;">
+              <source src="../assets/projects/ic-chip-ocr/video2.mp4" type="video/mp4">
+            </video>
+            <video autoplay loop muted playsinline style="width:60%; border-radius:8px;">
+              <source src="../assets/projects/ic-chip-ocr/video3.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="padding:18px; margin-top:14px;">
+        <h3 style="margin-top:0;">Image Gallery</h3>
+        <div class="gallery">
+          <div style="display:flex;gap:16px;">
+            <img src="../assets/projects/ic-chip-ocr/image1.jpg" style="width:calc(39% - 22.8px);height:auto;border-radius:8px;">
+            <img src="../assets/projects/ic-chip-ocr/image2.jpg" style="width:calc(39% - 22.8px);height:auto;border-radius:8px;">
+            <img src="../assets/projects/ic-chip-ocr/image3.jpg" style="width:calc(39% - 22.8px);height:auto;border-radius:8px;">
+            <img src="../assets/projects/ic-chip-ocr/image4.jpg" style="width:calc(39% - 22.8px);height:auto;border-radius:8px;">
+            <img src="../assets/projects/ic-chip-ocr/image5.jpg" style="width:calc(39% - 22.8px);height:auto;border-radius:8px;">
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="padding:18px; margin-top:14px;">
+        <h3 style="margin-top:0;">End Result</h3>
+        <ul class="bullets">
+          <li>High-accuracy character recognition system with >99% accuracy under production conditions.</li>
+          <li>Reliable text box detection across multiple text categories.</li>
+          <li>Real-time performance suitable for high-speed production lines.</li>
+          <li>Automated quality verification reducing manual inspection requirements.</li>
+          <li>Robust performance under varying lighting and chip surface conditions.</li>
+          <li>Minimal false positives ensuring efficient production flow.</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="y"></span> Dr. Saqib Bhatti</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
