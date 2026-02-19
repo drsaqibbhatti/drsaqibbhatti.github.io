@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>UMP Dot Matrix Pattern Recognition with Object Detection — Dr. Saqib Bhatti</title>
+  <meta name="description" content="Micro dot pattern recognition using YOLOv8-style object detection for unit pattern classification." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="bg"></div>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="../index.html">← Back<span>.</span></a>
+      <nav class="links">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#contact" class="btn">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <div class="section-head">
+        <h2>UMP Dot Matrix Pattern Recognition with Object Detection</h2>
+        <p>Micro dot detection · YOLOv8-style architecture · 0/1 Classification · Production-grade inference</p>
+      </div>
+
+      <div class="card" style="padding:18px;">
+        <h3 style="margin-top:0;">Overview</h3>
+        <p class="muted">
+          This project focuses on detecting micro dot patterns on a unit surface — specifically circular dot clusters 
+          and a long bar pattern — and classifying each detected unit pattern as 0 or 1.
+          Due to confidentiality, the exact product and pattern meaning are not disclosed; the scope of my work was 
+          robust detection and classification of the pattern units under real production conditions.
+        </p>
+
+        <div class="tags" style="margin-top:14px">
+          <span style="display:inline-flex;align-items:center;gap:6px;"><span style="font-size:16px;">🔍</span> Object Detection</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><span style="font-size:16px;">⚫</span> Small Object</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><i class="devicon-pytorch-original colored" style="font-size:16px;"></i> PyTorch</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><i class="devicon-opencv-plain colored" style="font-size:16px;"></i> OpenCV</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;"><i class="devicon-csharp-plain colored" style="font-size:16px;"></i> C#</span>
+        </div>
+      </div>
+
+      <div class="grid two" style="margin-top:14px;">
+        <div class="card" style="padding:18px;">
+          <h3 style="margin-top:0;">Problem</h3>
+          <ul class="bullets">
+            <li>Targets are very small objects (tiny dots / short segments), making detection challenging.</li>
+            <li>High risk of missed detections due to:
+              <ul class="bullets" style="margin-top:8px;">
+                <li>Low contrast / reflective surfaces</li>
+                <li>Sensor noise</li>
+                <li>Small object scale relative to full image</li>
+                <li>Dense patterns (many nearby objects)</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card" style="padding:18px;">
+          <h3 style="margin-top:0;">Solution</h3>
+          <ul class="bullets">
+            <li>Implemented an object detection pipeline based on a YOLOv8-style architecture, customized for small-object performance.</li>
+            <li>Key improvements included:
+              <ul class="bullets" style="margin-top:8px;">
+                <li>Higher input resolution / multi-scale strategy</li>
+                <li>Feature refinement for small targets (stronger shallow features, better fusion)</li>
+                <li>Anchor / detection head tuning for tiny objects</li>
+                <li>Augmentation strategy tailored to pattern consistency (blur, noise, brightness, rotation)</li>
+                <li>Optional tiling / ROI-based inference to preserve tiny details when needed</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid two" style="margin-top:14px;">
+        <div class="card" style="padding:18px;">
+          <h3 style="margin-top:0;">Output</h3>
+          <ul class="bullets">
+            <li>Detects each unit pattern (dot region / bar region)</li>
+            <li>Assigns 0/1 label per detected unit</li>
+            <li>Produces overlay results for verification (bounding boxes + confidence)</li>
+          </ul>
+        </div>
+
+        <div class="card" style="padding:18px;">
+          <h3 style="margin-top:0;">Implementation</h3>
+          <p class="muted" style="display:flex;align-items:center;gap:8px;"><i class="devicon-python-plain colored" style="font-size:20px;"></i> <strong>Language:</strong> Python, C#</p>
+          <p class="muted"><strong>Libraries:</strong></p>
+          <div style="display:flex;gap:12px;align-items:center;margin-top:8px;flex-wrap:wrap;">
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-pytorch-original colored" style="font-size:20px;"></i> PyTorch</span>
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-opencv-plain colored" style="font-size:20px;"></i> OpenCV</span>
+            <span style="display:flex;align-items:center;gap:6px;"><i class="devicon-numpy-plain colored" style="font-size:20px;"></i> NumPy</span>
+          </div>
+          <p class="muted" style="margin-top:12px;"><strong>Framework:</strong> YOLOv8-style detection framework (customized)</p>
+          <p class="muted"><strong>Outputs:</strong> Bounding boxes · Confidence scores · 0/1 labels · Overlay visualization</p>
+        </div>
+      </div>
+
+      <div class="card" style="padding:18px; margin-top:14px;">
+        <h3 style="margin-top:0;">Result</h3>
+        <ul class="bullets">
+          <li>Reliable detection of dense, tiny pattern units with production-friendly inference speed.</li>
+          <li>Reduced manual inspection by providing consistent, measurable detection outputs.</li>
+        </ul>
+      </div>
+
+      <!-- <div class="card" style="padding:18px; margin-top:14px;">
+        <h3 style="margin-top:0;">Demo / Gallery</h3>
+        <p class="muted">Add sample images or demo videos when available.</p>
+
+        <div class="gallery">
+          <figure class="shot">
+            <img src="../assets/projects/ump-dot-matrix/sample1.png" alt="UMP detection example 1" loading="lazy" />
+            <figcaption class="muted">Case 1 — Dot pattern detection</figcaption>
+          </figure>
+        </div>
+      </div> -->
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="y"></span> Dr. Saqib Bhatti</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
