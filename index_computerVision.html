@@ -370,12 +370,12 @@
         </p>
 
         <div class="cta">
-          <a class="ghost" href="#projects" data-i18n="Industrial Projects">Industrial Projects</a>
-          <a class="ghost" href="#experience" data-i18n="Experience">Experience</a>
-          <a class="ghost" href="#publications" data-i18n="Publications">Publications</a>
+          <a class="ghost" href="#projects" data-i18n="Industrial Projects" id="projects-btn">Industrial Projects</a>
+          <a class="ghost" href="#experience" data-i18n="Experience" id="experience-btn">Experience</a>
+          <a class="ghost" href="#publications" data-i18n="Publications" id="publications-btn">Publications</a>
 
-          <a class="ghost" href="https://github.com/drsaqibbhatti?tab=repositories" target="_blank" rel="noreferrer">GitHub</a>
-          <a class="ghost" href="https://www.linkedin.com/in/dr-saqib-bhatti-21433b18/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="ghost" href="https://github.com/drsaqibbhatti?tab=repositories" target="_blank" rel="noreferrer" id="github-btn">GitHub</a>
+          <a class="ghost" href="https://www.linkedin.com/in/dr-saqib-bhatti-21433b18/" target="_blank" rel="noreferrer" id="linkedin-btn">LinkedIn</a>
 
           <a class="ghost" href="resume.pdf" target="_blank" id="cv-btn">Download Resume</a>
         </div>
@@ -1895,6 +1895,32 @@
 
     document.getElementById('contact-btn')?.addEventListener('click', function () {
       gtag('event', 'contact_click', {
+        page_location: window.location.href
+      });
+    });
+
+    document.getElementById('projects-btn')?.addEventListener('click', function () {
+      gtag('event', 'projects_click', {
+        page_location: window.location.href
+      });
+    });
+    document.getElementById('experience-btn')?.addEventListener('click', function () {
+      gtag('event', 'experience_click', {
+        page_location: window.location.href
+      });
+    });
+    document.getElementById('publications-btn')?.addEventListener('click', function () {
+      gtag('event', 'publications_click', {
+        page_location: window.location.href
+      });
+    });
+    document.getElementById('github-btn')?.addEventListener('click', function () {
+      gtag('event', 'github_click', {
+        page_location: window.location.href
+      });
+    });
+    document.getElementById('linkedin-btn')?.addEventListener('click', function () {
+      gtag('event', 'linkedin_click', {
         page_location: window.location.href
       });
     });
