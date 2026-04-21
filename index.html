@@ -1899,6 +1899,33 @@
         page_location: window.location.href
       });
     });
+
+    // Add event tracking for hero section buttons
+    document.querySelector('.cta a[href="#projects"]')?.addEventListener('click', function () {
+      gtag('event', 'hero_projects_click', {
+        page_location: window.location.href
+      });
+    });
+    document.querySelector('.cta a[href="#experience"]')?.addEventListener('click', function () {
+      gtag('event', 'hero_experience_click', {
+        page_location: window.location.href
+      });
+    });
+    document.querySelector('.cta a[href="#publications"]')?.addEventListener('click', function () {
+      gtag('event', 'hero_publications_click', {
+        page_location: window.location.href
+      });
+    });
+    document.querySelector('.cta a[href*="github.com"]')?.addEventListener('click', function () {
+      gtag('event', 'hero_github_click', {
+        page_location: window.location.href
+      });
+    });
+    document.querySelector('.cta a[href*="linkedin.com"]')?.addEventListener('click', function () {
+      gtag('event', 'hero_linkedin_click', {
+        page_location: window.location.href
+      });
+    });
   </script>
 </body>
 </html>

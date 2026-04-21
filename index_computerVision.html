@@ -340,7 +340,7 @@
         <a href="#skills" class="nav-btn-transparent" data-i18n="Skills">Skills</a>
         <a href="#publications" class="nav-btn-transparent" data-i18n="Publications">Publications</a>
         <a href="#service" class="nav-btn-transparent" data-i18n="Recognition">Recognition</a>
-        <a href="#contact" class="btn" data-i18n="Contact">Contact</a>
+        <a href="#contact" class="btn" data-i18n="Contact" id="contact-btn">Contact</a>
         <div class="theme-toggle">
           <button class="theme-btn" id="lightBtn" onclick="setTheme('light')">☀️ Light</button>
           <button class="theme-btn" id="darkBtn" onclick="setTheme('dark')">🌙 Dark</button>
@@ -377,7 +377,7 @@
           <a class="ghost" href="https://github.com/drsaqibbhatti?tab=repositories" target="_blank" rel="noreferrer">GitHub</a>
           <a class="ghost" href="https://www.linkedin.com/in/dr-saqib-bhatti-21433b18/" target="_blank" rel="noreferrer">LinkedIn</a>
 
-          <a class="ghost" href="resume.pdf" target="_blank" rel="noreferrer" data-i18n="Download Resume">Download Resume</a>
+          <a class="ghost" href="resume.pdf" target="_blank" id="cv-btn">Download Resume</a>
         </div>
 
         <div class="card" style="padding:18px;margin-top:20px;">
@@ -1885,6 +1885,19 @@
       }
     });
   </script>
+  <script>
+    document.getElementById('cv-btn')?.addEventListener('click', function () {
+      gtag('event', 'cv_download', {
+        file_name: 'resume.pdf',
+        page_location: window.location.href
+      });
+    });
 
+    document.getElementById('contact-btn')?.addEventListener('click', function () {
+      gtag('event', 'contact_click', {
+        page_location: window.location.href
+      });
+    });
+  </script>
 </body>
 </html>
