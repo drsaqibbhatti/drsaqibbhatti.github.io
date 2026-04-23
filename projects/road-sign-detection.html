@@ -141,6 +141,13 @@
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
+
+    // Mobile autoplay fix: iOS Safari ignores the autoplay attribute without an explicit .play() call
+    document.querySelectorAll('video[autoplay]').forEach(function(v) {
+      v.muted = true;
+      var p = v.play();
+      if (p !== undefined) p.catch(function() {});
+    });
   </script>
 </body>
 </html>
